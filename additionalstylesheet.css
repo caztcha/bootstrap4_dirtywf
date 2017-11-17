@@ -1,0 +1,148 @@
+<!--bootstrap 全体の CSS を上書き-->
+
+/*ボタン上のカーソル設定*/
+button{
+cursor:pointer;
+}
+
+/*基本リンク色の改善*/
+a{
+color:#005AB9; /*コントラスト改善*/
+}
+
+/*汎用部品 : ボタン (塗り) (.btn-primary の代わりに .btn-primary2 を使う)*/
+.btn-primary2{
+background-color:#005AB9; /*.btn-primary よりもコントラストを改善*/
+border-color:#005AB9; /*background-color と合わせる*/
+color:#ffffff;  /*ボタン内のラベル色*/
+/*border-radius:0;*/ /*角丸設定。お好みで。*/
+}
+
+/*汎用部品 : ボタン (アウトライン) (.btn-outline-primary の代わりに btn-outline-primary2 を使う) */
+.btn-outline-primary2{
+border-color:#005AB9; /*.btn-outline-primary よりもコントラストを改善*/
+color:#005AB9; /*ボタン内のラベル色*/
+/*border-radius:0;*/ /*角丸設定。お好みで。*/
+}
+
+/*汎用部品 : テキストリンク (本文コンテンツの段落内のインラインリンクには自動的に下線を付ける。)*/
+main p a{
+text-decoration:underline; /*下線を付ける*/
+}
+
+/*汎用部品 : テキストリンク (テーブルのデータセル内のリンクには自動的に下線を付ける。)*/
+main td a{
+text-decoration:underline; /*下線を付ける*/
+}
+
+/*汎用部品 : テキストリンク (箇条書きリンクなど、必要に応じて .underline を追記することでリンクに下線を付ける。)*/
+a.underline{
+text-decoration:underline; /*下線を付ける*/
+}
+
+/*汎用部品 : ナビゲーションバー (.navbar-light のとき) */
+
+.navbar-light{
+border-bottom:1px #999999 solid; /*薄く境界線を引く*/
+}
+
+.navbar-light .navbar-nav .nav-link{
+color:rgba(0,0,0,1); /*コントラスト改善*/
+}
+
+.navbar-light .navbar-nav .nav-link:focus{
+color:rgba(0,0,0,1); /*フォーカス時のコントラスト改善*/
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+color:rgba(0,0,0,1); /*マウスオーバー時のコントラスト改善*/
+}
+
+.navbar-light .navbar-nav .active>.nav-link{
+color:rgba(0,0,0,1); /*current のメニューの文字色を濃くする*/
+font-weight:bold; /*current のメニューの文字をボールドにする*/
+}
+
+.navbar-light .navbar-toggler{
+color:rgba(0,0,0,1); /*メニューの開閉トグルの文字色を濃くする*/
+}
+
+/*汎用部品 : ナビゲーションバー (.navbar-dark のとき) */
+
+.navbar-dark .navbar-nav .nav-link{
+color:rgba(255,255,255,1); /*コントラスト改善*/
+}
+
+.navbar-dark .navbar-nav .nav-link:focus{
+color:rgba(255,255,255,1); /*フォーカス時のコントラスト改善*/
+}
+
+.navbar-dark .navbar-nav .nav-link:hover{
+color:rgba(255,255,255,1); /*マウスオーバー時のコントラスト改善*/
+}
+
+.navbar-dark .navbar-nav .active>.nav-link{
+color:rgba(255,255,255,1); /*current のメニューの文字色を濃くする*/
+font-weight:bold; /*current のメニューの文字をボールドにする*/
+}
+
+.navbar-dark .navbar-toggler{
+color:rgba(255,255,255,1); /*メニューの開閉トグルの文字色を濃くする*/
+}
+
+/*汎用部品 : ナビゲーションの開閉ボタン*/
+nav button.navbar-toggler[aria-expanded="false"] i.fa-times{
+display:none;
+}
+
+nav button.navbar-toggler[aria-expanded="true"] i.fa-bars{
+display:none;
+}
+
+nav.navbar-local button.navbar-toggler[aria-expanded="false"] i.fa-times{
+display:none;
+}
+
+nav.navbar-local button.navbar-toggler[aria-expanded="true"] i.fa-plus{
+display:none;
+}
+
+nav.nav-bigfooter button.navbar-toggler[aria-expanded="false"] i.fa-times{
+display:none;
+}
+
+nav.nav-bigfooter button.navbar-toggler[aria-expanded="true"] i.fa-plus{
+display:none;
+}
+
+/*汎用部品 : パンくず*/
+
+ol.breadcrumb{
+background-color:inherit; /*パンくず部分に背景色を無くす*/
+padding-left:0; /*背景色を無くすことに伴う位置調整*/
+}
+
+li.breadcrumb-item.active{
+color:#212529; /*アクティブ項目のコントラスト改善*/
+font-weight:bold; /*アクティブ項目の視認性向上*/
+}
+
+li.breadcrumb-item+.breadcrumb-item::before{
+content:"＞"; /*デフォルトのスラッシュではなく一般的な不等号記号を使う*/
+color:#212529; /*記号のコントラスト改善*/
+font-weight:bold; /*記号の視認性向上*/
+}
+
+/*汎用部品 : フッター*/
+div.footer-area a{
+color:#212529;
+}
+
+div.footer-area a:hover{
+text-decoration:none;
+}
+
+div.footer-area li{
+list-style:none;
+margin-bottom:0.5em;
+}
