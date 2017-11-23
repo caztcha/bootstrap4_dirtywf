@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<title>基本テンプレート &mdash; Foo Baa Corporation</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+<!-- Additional CSS -->
+<link rel="stylesheet" type="text/css" href="additionalstylesheet.css" >
+
+<meta name="description" content="">
+
+</head>
+
+<body>
+
+<!------------------------------------------------------ Global Navigation ------------------------------------------------------>
+<!-- RWD 対応せずに常にハンバーガーアイコンで折りたたむ場合は、nav 要素から .navbar-expand-lg 属性をトル。-->
+<nav aria-label="サイト全体メニュー"  class="navbar navbar-expand-lg navbar-light py-4" style="background-color: #f6f6f6;"> <!-- navbar の背景色を light にする場合。背景色は style 属性で設定。 -->
+<!--<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #767676;">--> <!-- navbar の背景色を dark にする場合。背景色は style 属性で設定。 -->
+<a class="navbar-brand mr-5" href="#">[Site ID]</a>
+
+<button class="navbar-toggler" style="border:none;" type="button" data-toggle="collapse" data-target="#navbarTogglerGlobalNav" aria-controls="navbarTogglerGlobalNav" aria-expanded="false" aria-label="サイト全体メニューの開閉"><small aria-hidden="true">MENU</small> <i class="fa fa-bars fa-lg" aria-hidden="true"></i><i class="fa fa-times fa-lg" aria-hidden="true"></i></button>
+
+<div class="collapse navbar-collapse" id="navbarTogglerGlobalNav">
+  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <li class="nav-item"><a class="nav-link mr-2" href="#">ホーム</a></li>
+    <!--子階層のドロップダウンがある場合。-->
+    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle mr-2 " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">メニュー1</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #f6f6f6; z-index:1040;"><!--背景色と z-index を適宜設定。-->
+            <a class="dropdown-item" href="#">メニュー1-1</a>
+            <a class="dropdown-item" href="#">メニュー1-2</a>
+            <a class="dropdown-item" href="#">メニュー1-3</a>
+          </div>
+    </li>
+    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー2</a></li>
+    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー3</a></li>
+    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー4</a></li>
+    <li class="nav-item"><a class="nav-link mr-0" href="#">メニュー5</a></li>
+  </ul>
+  <form class="form-inline my-4 my-lg-0">
+    <div class="input-group">
+      <label for="search" class="sr-only">サイト内検索</label>
+      <input id="search" class="form-control" type="search" placeholder="サイト内検索">
+      <span class="input-group-btn">
+      <button class="btn" type="submit" style="background:#f6f6f6; border-radius:0; border:1px #ced4da solid;"><span class="sr-only">検索</span><i class="fa fa-search" aria-hidden="true"></i></button>
+      </span>
+    </div>
+  </form>
+</div>
+</nav><!-- End Global Navigation -->
+
+
+<!------------------------------------------------------ Main Content ------------------------------------------------------>
+<main>
+
+<div style="height:30em;"></div>
+
+</main>
+<!------------------------------------------------------ End Main Content ------------------------------------------------------>
+
+<!-- Breadcrumb -->
+<div class="container">
+<nav aria-label="現在位置" role="navigation">
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">ホーム</a></li>
+  <li class="breadcrumb-item"><a href="#">XXXXX</a></li>
+  <li class="breadcrumb-item active" aria-current="page">XXXXX</li>
+</ol>
+</nav>
+</div><!-- end of .container--><!--End Breadcrumb-->
+
+
+
+<!------------------------------------------------------ Footer Area ------------------------------------------------------>
+<div class="footer-area pb-3"  style="background-color: #f6f6f6; border-top:1px #999999 solid;"><!-- 閉じタグは、/body の直前  -->
+
+
+<div class="container">
+<footer class="mt-4">
+<ul class="nav">
+  <li><a class="nav-link pl-0 mr-1" href="#">Terms of Use</a></li>
+  <li><a class="nav-link pl-0 mr-1" href="#">Privacy</a></li>
+  <li><a class="nav-link pl-0 mr-1" href="#">Accessibility</a></li>
+  <li><a class="nav-link pl-0 mr-1" href="#">Contact Us</a></li>
+</ul>
+
+<p class="text-right mt-4 mb-0">&copy; Foo Baa Corporation</p>
+</footer>
+</div><!-- end .container -->
+
+
+</div><!-- end .footer-area -->
+<!------------------------------------------------------ End Footer Area ------------------------------------------------------>
+
+<!-- Optional JavaScript -->
+<!-- Font Awesome CDN -->
+<script src="https://use.fontawesome.com/50f2d27e22.js"></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<!-- nav.nav-bigfooter の表示制御 -->
+<script src="nav-bigfooter.js"></script>
+
+</body>
+</html>
