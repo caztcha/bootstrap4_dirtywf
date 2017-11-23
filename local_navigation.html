@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<title>基本テンプレート &mdash; Foo Baa Corporation</title>
+<title>ローカル (カテゴリー) ナビゲーション &mdash; Foo Baa Corporation</title>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -42,15 +42,19 @@
     <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー4</a></li>
     <li class="nav-item"><a class="nav-link mr-0" href="#">メニュー5</a></li>
   </ul>
-  <form class="form-inline my-2 my-lg-0">
-    <label for="search" class="sr-only">サイト内検索</label>
-    <input id="search" class="form-control mr-sm-2" type="search" placeholder="サイト内検索">
-    <button class="btn btn-outline-primary2 my-2 my-sm-0" type="submit" style="background:#f6f6f6;"><span class="sr-only">検索</span><i class="fa fa-search" aria-hidden="true"></i></button>
+  <form class="form-inline my-4 my-lg-0">
+    <div class="input-group">
+      <label for="search" class="sr-only">サイト内検索</label>
+      <input id="search" class="form-control" type="search" placeholder="サイト内検索">
+      <span class="input-group-btn">
+      <button class="btn" type="submit" style="background:#f6f6f6; border-radius:0; border:1px #ced4da solid;"><span class="sr-only">検索</span><i class="fa fa-search" aria-hidden="true"></i></button>
+      </span>
+    </div>
   </form>
 </div>
-</nav>
+</nav><!-- End Global Navigation -->
 
-<!------------------------------------------------------ Local Navigation ------------------------------------------------------>
+<!------------------------------------------------------ (Local Navigation) ------------------------------------------------------>
 <nav aria-label="カテゴリーメニュー" class="navbar navbar-local sticky-top navbar-expand-lg navbar-light" style="background-color: #ffffff;"> <!-- navbar の背景色を light にする場合。背景色は style 属性で設定。 -->
 <!--<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #767676;">--> <!-- navbar の背景色を dark にする場合。背景色は style 属性で設定。 -->
 
@@ -67,40 +71,19 @@
   </ul>
 </div>
 </nav>
+<!------------------------------------------------------ (End Local Navigation) ------------------------------------------------------>
 
-<main>
+
 <!------------------------------------------------------ Main Content ------------------------------------------------------>
+<main>
 
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-3">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-  </div>
-</div>
+<div style="height:30em;"></div>
 
-<div class="container">
-
-<h2>ボタン</h2>
-
-<div class="mt-3 mb-4">
-<button class="btn btn-primary2">ボタン <i class="fa fa-angle-right" aria-hidden="true"></i></button>
-</div>
-
-<h2>CTAリンク</h2>
-
-<div class="mt-3 mb-4">
-<a href="#" class="btn btn-outline-primary2">CTA リンク <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-</div>
-
-<h2>インラインのテキストリンク</h2>
-
-<p>
-You can use the mark tag to <a href="#">highlight</a> text.</p>
-</p>
-
+</main>
 <!------------------------------------------------------ End Main Content ------------------------------------------------------>
 
 <!-- Breadcrumb -->
+<div class="container">
 <nav aria-label="現在位置" role="navigation">
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="#">ホーム</a></li>
@@ -108,77 +91,29 @@ You can use the mark tag to <a href="#">highlight</a> text.</p>
   <li class="breadcrumb-item active" aria-current="page">XXXXX</li>
 </ol>
 </nav>
+</div><!-- end of .container--><!--End Breadcrumb-->
 
-</div><!-- end of .container-->
-</main>
 
 
 <!------------------------------------------------------ Footer Area ------------------------------------------------------>
 <div class="footer-area pb-3"  style="background-color: #f6f6f6; border-top:1px #999999 solid;"><!-- 閉じタグは、/body の直前  -->
 
 <div class="container">
-<nav class="mt-5 nav-bigfooter" label="サイトマップ">
-<h2 class="sr-only">サイトマップ</h2>
-<div class="row">
-    <div class="col-lg">
-      <h3 class="h5 mb-3"><a href="#">見出し <i class="fa fa-angle-right" aria-hidden="true"></i></a> 
-      <button class="navbar-toggler d-lg-none float-right" style="border:none;" type="button" data-toggle="collapse" data-target="#bigfooter-1" aria-controls="bigfooter-1" aria-expanded="false" aria-label="メニューの開閉"><i class="fa fa-plus fa-lg" aria-hidden="true"></i><i class="fa fa-times fa-lg" aria-hidden="true"></i></button></h3>
-      <div class="collapse" id="bigfooter-1">
-      <ul>
-        <li><a href="#">メニュー項目 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-      </ul>
-      </div>
-    </div><!-- end .col-lg-->
-    <div class="col-lg">
-      <h3 class="h5 mb-3"><a href="#">見出し <i class="fa fa-angle-right" aria-hidden="true"></i></a> 
-      <button class="navbar-toggler d-lg-none float-right" style="border:none;" type="button" data-toggle="collapse" data-target="#bigfooter-2" aria-controls="bigfooter-2" aria-expanded="false" aria-label="メニューの開閉"><i class="fa fa-plus fa-lg" aria-hidden="true"></i><i class="fa fa-times fa-lg" aria-hidden="true"></i></button></h3>
-      <div  class="collapse" id="bigfooter-2">
-      <ul>
-        <li><a href="#">メニュー項目 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-      </ul>
-      </div>
-    </div><!-- end .col-lg-->
-    <div class="col-lg">
-      <h3 class="h5 mb-3"><a href="#">見出し <i class="fa fa-angle-right" aria-hidden="true"></i></a> 
-      <button class="navbar-toggler d-lg-none float-right" style="border:none;" type="button" data-toggle="collapse" data-target="#bigfooter-3" aria-controls="bigfooter-3" aria-expanded="false" aria-label="メニューの開閉"><i class="fa fa-plus fa-lg" aria-hidden="true"></i><i class="fa fa-times fa-lg" aria-hidden="true"></i></button></h3>
-      <div  class="collapse" id="bigfooter-3">
-      <ul>
-        <li><a href="#">メニュー項目 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-      </ul>
-      </div>
-      <h3 class="h5 mb-3"><a href="#">見出し <i class="fa fa-angle-right" aria-hidden="true"></i></a></h3>
-      <h3 class="h5 mb-3"><a href="#">見出し <i class="fa fa-angle-right" aria-hidden="true"></i></a></h3>
-    </div><!-- end .col-lg-->
-</div><!-- end .row -->
-</nav>
-
-<footer>
-<hr>
+<footer class="mt-4">
 <ul class="nav">
-  <li><a class="nav-link" href="#">Terms of Use</a></li>
-  <li><a class="nav-link" href="#">Privacy</a></li>
-  <li><a class="nav-link" href="#">Accessibility</a></li>
-  <li><a class="nav-link" href="#">Contact Us</a></li>
+  <li><a class="nav-link pl-0 mr-1" href="#">Terms of Use</a></li>
+  <li><a class="nav-link pl-0 mr-1" href="#">Privacy</a></li>
+  <li><a class="nav-link pl-0 mr-1" href="#">Accessibility</a></li>
+  <li><a class="nav-link pl-0 mr-1" href="#">Contact Us</a></li>
 </ul>
 
-<hr>
-<p class="text-right mr-3 mb-0">&copy; Foo Baa Corporation</p>
+<p class="text-right mt-4 mb-0">&copy; Foo Baa Corporation</p>
 </footer>
-
 </div><!-- end .container -->
+
+
 </div><!-- end .footer-area -->
+<!------------------------------------------------------ End Footer Area ------------------------------------------------------>
 
 <!-- Optional JavaScript -->
 <!-- Font Awesome CDN -->
