@@ -157,3 +157,24 @@ div.footer-area nav li{
 list-style:none;
 margin-bottom:0.5em; /*タップ領域の確保*/
 }
+
+
+/*メガドロップダウンメニュー*/
+
+li.mega-dropdown{
+position:static;
+}
+
+nav li.mega-dropdown a[aria-expanded="true"]{
+font-weight:bold;
+}
+
+nav div.mega-dropdown-menu{
+width:100%;
+border-radius:0;
+border-top:1px #dddddd solid;
+border-left:none;
+border-right:none;
+border-bottom:1px #dddddd solid;
+margin-top:0;
+}
