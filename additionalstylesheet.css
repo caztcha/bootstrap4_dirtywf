@@ -1,4 +1,10 @@
 
+/*汎用設定 : data-toggle=collapse (ハンバーガーメニューなど) のアニメーション無効化。*/
+.collapsing {
+  -webkit-transition: none;
+  transition: none;
+}
+
 /*汎用設定 : ボタン hover 時のカーソル*/
 
 button{
@@ -178,3 +184,15 @@ border-right:none;
 border-bottom:1px #dddddd solid;
 margin-top:0;
 }
+
+@media screen and (min-width:992px){
+  nav div.mega-dropdown-menu{
+  border-top:none;
+  border-bottom:1px #999999 solid;
+  padding-top:0;
+  }
+  nav div.mega-dropdown-menu div.row{
+  margin-top:0;
+  } 
+}
+

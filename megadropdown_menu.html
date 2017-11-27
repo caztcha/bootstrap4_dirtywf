@@ -28,16 +28,15 @@
 
 <div class="collapse navbar-collapse" id="navbarTogglerGlobalNav">
   <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-    <li class="nav-item"><a class="nav-link mr-2 " href="#">ホーム</a></li>
     <!-- メガドロップダウンメニュー -->
-    <li class="nav-item dropdown mega-dropdown"><a class="nav-link dropdown-toggle mr-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">メニュー1</a>
-          <div class="dropdown-menu mega-dropdown-menu mb-3  px-3" aria-labelledby="navbarDropdownMenuLink" style="background-color: #f6f6f6; z-index:1040;"><!--背景色と z-index を適宜設定。-->
+    <li class="nav-item dropdown mega-dropdown"><a class="nav-link dropdown-toggle mr-5" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">メニュー1</a>
+          <div class="dropdown-menu mega-dropdown-menu mb-3 px-3" aria-labelledby="navbarDropdownMenuLink" style="background-color: #f6f6f6; z-index:1040;"><!--背景色と z-index を適宜設定。-->
           <div class="row">
             <div class="col-md-4 col-sm-6 my-3">
               <div class="media">
               <img class="mr-3" src="http://placehold.jp/100x100.png?text=(image)" alt="(代替テキスト)">
                 <div class="media-body">
-                  <h2 class="h6">見出し</h2>
+                  <h2 class="h5">見出し</h2>
                   <a class="dropdown-item" href="#">メニュー1</a>
                   <a class="dropdown-item" href="#">メニュー2</a>
                   <a class="dropdown-item" href="#">メニュー3</a>
@@ -48,7 +47,7 @@
               <div class="media">
               <img class="mr-3" src="http://placehold.jp/100x100.png?text=(image)" alt="(代替テキスト)">
                 <div class="media-body">
-                  <h2 class="h6">見出し</h2>
+                  <h2 class="h5">見出し</h2>
                   <a class="dropdown-item" href="#">メニュー1</a>
                   <a class="dropdown-item" href="#">メニュー2</a>
                   <a class="dropdown-item" href="#">メニュー3</a>
@@ -59,7 +58,7 @@
               <div class="media">
               <img class="mr-3" src="http://placehold.jp/100x100.png?text=(image)" alt="(代替テキスト)">
                 <div class="media-body">
-                  <h2 class="h6">見出し</h2>
+                  <h2 class="h5">見出し</h2>
                   <a class="dropdown-item" href="#">メニュー1</a>
                   <a class="dropdown-item" href="#">メニュー2</a>
                   <a class="dropdown-item" href="#">メニュー3</a>
@@ -69,10 +68,10 @@
           </div><!--End .row-->
           </div>
     </li><!-- End .mega-dropdown -->
-    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー2</a></li>
-    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー3</a></li>
-    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー4</a></li>
-    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー5</a></li>
+    <li class="nav-item"><a class="nav-link mr-5" href="#">メニュー2</a></li>
+    <li class="nav-item"><a class="nav-link mr-5" href="#">メニュー3</a></li>
+    <li class="nav-item"><a class="nav-link mr-5" href="#">メニュー4</a></li>
+    <li class="nav-item"><a class="nav-link mr-0" href="#">メニュー5</a></li>
   </ul>
   <form class="form-inline my-4 my-lg-0">
     <div class="input-group">
@@ -140,6 +139,9 @@
 
 <!-- nav.nav-bigfooter の表示制御 -->
 <script src="nav-bigfooter.js"></script>
+
+<!-- .mega-dropdown-menu の表示制御 -->
+<script src="mega-dropdown-menu.js"></script>
 
 </body>
 </html>
