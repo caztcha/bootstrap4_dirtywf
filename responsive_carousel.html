@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<title>レスポンシブなカルーセル &mdash; Foo Baa Corporation</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Carousel (Slick) -->
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+<!-- Additional CSS -->
+<link rel="stylesheet" type="text/css" href="additionalstylesheet.css" >
+
+<meta name="description" content="">
+
+</head>
+
+<body>
+
+<!------------------------------------------------------ Global Navigation ------------------------------------------------------>
+<!-- RWD 対応せずに常にハンバーガーアイコンで折りたたむ場合は、nav 要素から .navbar-expand-lg 属性をトル。-->
+<nav aria-label="サイト全体メニュー"  class="navbar navbar-expand-lg navbar-light py-4" style="background-color: #f6f6f6;"> <!-- navbar の背景色を light にする場合。背景色は style 属性で設定。 -->
+<!--<nav class="navbar navbar-expand-lg navbar-dark py-4" style="background-color: #767676;">--> <!-- navbar の背景色を dark にする場合。背景色は style 属性で設定。 -->
+<a class="navbar-brand mr-5" href="#">[Site ID]</a>
+
+<button class="navbar-toggler" style="border:none;" type="button" data-toggle="collapse" data-target="#navbarTogglerGlobalNav" aria-controls="navbarTogglerGlobalNav" aria-expanded="false" aria-label="サイト全体メニューの開閉"><small aria-hidden="true">MENU</small> <i class="fa fa-bars fa-lg" aria-hidden="true"></i><i class="fa fa-times fa-lg" aria-hidden="true"></i></button>
+
+<div class="collapse navbar-collapse" id="navbarTogglerGlobalNav">
+  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <li class="nav-item"><a class="nav-link mr-2" href="#">ホーム</a></li>
+    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー1</a></li>
+    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー2</a></li>
+    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー3</a></li>
+    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー4</a></li>
+    <li class="nav-item"><a class="nav-link mr-0" href="#">メニュー5</a></li>
+  </ul>
+  <form class="form-inline my-4 my-lg-0">
+    <div class="input-group">
+      <label for="search" class="sr-only">サイト内検索</label>
+      <input id="search" class="form-control" type="search" placeholder="サイト内検索">
+      <span class="input-group-btn">
+      <button class="btn" type="submit" style="background:#f6f6f6; border-radius:0; border:1px #ced4da solid;"><span class="sr-only">検索</span><i class="fa fa-search" aria-hidden="true"></i></button>
+      </span>
+    </div>
+  </form>
+</div>
+</nav><!-- End Global Navigation -->
+
+
+<!------------------------------------------------------ Main Content ------------------------------------------------------>
+<main>
+
+<div class="container">
+
+<h1 class="my-5">レスポンシブなカルーセル</h1>
+
+<p>複数パネルを表示する (画面サイズに応じてパネル数が増減する) カルーセル。jQuery プラグインの <a href="http://kenwheeler.github.io/slick/">Slick</a> を使用。</p>
+
+
+<h2 class="my-5">アクセシビリティの配慮</h2>
+
+<ul>
+<li>[Tab] キーによるフォーカス移動および [Enter] キーによる実行が可能。スクリーンリーダーを併用していない場合は、左右矢印キーでもパネル切り替えが可能。</li>
+<li>ボタン (前のパネル/次のパネル) の aria-label 属性値を日本語化 (slick.js を加筆修正)。</li>
+<li>各パネルがリンクである想定。その場合、&lt;a&gt; 要素に対する親要素 (たとえば、div や、箇条書きマークアップであれば li など) があると、Slick の仕様としてその親要素にもフォーカスが当たるようになっているため、スクリーンリーダーユーザーがリンクを利用できない (&lt;a&gt; 要素にフォーカスが当たってもラベルが読み上げられない) 恐れがある。このため、このサンプルでは、各パネルで &lt;a&gt; が親要素になるようにしている。</li>
+<li>カルーセルの親要素 &lt;div class="responsive-carousel"&gt; に aria-live="polite" を記述。パネルを切り替えるたびにライブで、表示されるパネル (の画像 alt やテキストラベル) がスクリーンリーダーで読み上げられるようにしている。</li>
+</ul>
+
+<div class="responsive-carousel mx-3 my-5" aria-live="polite">
+	<a href="https://www.google.co.jp" class="mx-2 my-2"><img class="mx-auto" src="http://placehold.jp/300x200.png?text=Panel01" alt="1枚目のパネル" style="width:90%;" /><h3 class="mt-1 text-center">Heading01</h3><p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p></a>
+	<a href="https://www.yahoo.co.jp" class="mx-2 my-2"><img class="mx-auto" src="http://placehold.jp/300x200.png?text=Panel02" alt="2枚目のパネル" style="width:90%;" /><h3 class="mt-1 text-center">Heading02</h3><p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p></a>
+	<a href="https://www.google.co.jp" class="mx-2 my-2"><img class="mx-auto" src="http://placehold.jp/300x200.png?text=Panel03" alt="3枚目のパネル" style="width:90%;" /><h3 class="mt-1 text-center">Heading03</h3><p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p></a>
+	<a href="https://www.yahoo.co.jp" class="mx-2 my-2"><img class="mx-auto" src="http://placehold.jp/300x200.png?text=Panel04" alt="4枚目のパネル" style="width:90%;" /><h3 class="mt-1 text-center">Heading04</h3><p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p></a>
+	<a href="https://www.yahoo.co.jp" class="mx-2 my-2"><img class="mx-auto" src="http://placehold.jp/300x200.png?text=Panel05" alt="5枚目のパネル" style="width:90%;" /><h3 class="mt-1 text-center">Heading05</h3><p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p></a>
+</div>
+
+
+</div><!-- End .container -->
+</main>
+<!------------------------------------------------------ End Main Content ------------------------------------------------------>
+
+<!-- Breadcrumb -->
+<div class="container">
+<nav aria-label="現在位置" role="navigation">
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">ホーム</a></li>
+  <li class="breadcrumb-item"><a href="#">XXXXX</a></li>
+  <li class="breadcrumb-item active" aria-current="page">XXXXX</li>
+</ol>
+</nav>
+</div><!-- end of .container--><!--End Breadcrumb-->
+
+
+
+<!------------------------------------------------------ Footer Area ------------------------------------------------------>
+<div class="footer-area pb-3"  style="background-color: #f6f6f6; border-top:1px #999999 solid;"><!-- 閉じタグは、/body の直前  -->
+
+
+<div class="container">
+<footer class="mt-4">
+<ul class="nav">
+  <li><a class="nav-link pl-0 mr-1" href="#">Terms of Use</a></li>
+  <li><a class="nav-link pl-0 mr-1" href="#">Privacy</a></li>
+  <li><a class="nav-link pl-0 mr-1" href="#">Accessibility</a></li>
+  <li><a class="nav-link pl-0 mr-1" href="#">Contact Us</a></li>
+</ul>
+
+<p class="text-right mt-4 mb-0">&copy; Foo Baa Corporation</p>
+</footer>
+</div><!-- end .container -->
+
+<style>
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .55;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev:focus{
+outline:1px #000000 dotted;
+}
+
+.slick-next:focus{
+outline:1px #000000 dotted;
+}
+</style>
+
+</div><!-- end .footer-area -->
+<!------------------------------------------------------ End Footer Area ------------------------------------------------------>
+
+<!-- Optional JavaScript -->
+<!-- Font Awesome CDN -->
+<script src="https://use.fontawesome.com/50f2d27e22.js"></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<!-- nav.nav-bigfooter の表示制御 -->
+<script src="nav-bigfooter.js"></script>
+
+<!-- .mega-dropdown-menu の表示制御 -->
+<script src="mega-dropdown-menu.js"></script>
+
+<!-- Responsive Carousel (Slick) -->
+<script type="text/javascript" src="slick/slick.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('.responsive-carousel').slick({
+	        accessibility: true, 
+		dots: false, // スライダー下部に表示される、ドット状のページネーションです
+		infinite: false, // 無限ループ。これを true にした場合、表示されているパネルであるにもかかわらず tabindex="-1" になるバグがある。
+		speed: 300, // 切り替わりのスピード
+		slidesToShow: 3, //992px以上の領域では3画像表示
+		slidesToScroll: 1, 
+		centerMode: false, //これを true にすると、前後のパネルを「チラ見せ」できる。ただし、slideToShow が複数だと表示が崩れる。
+		responsive: [{
+			breakpoint: 992,settings: { //992px以下では2画像表示
+				slidesToShow: 2,
+				slidesToScroll: 1,
+			}
+		},
+		{
+			breakpoint: 768,settings: { //768px以下では1画像表示
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			}
+		},
+]
+	});
+});
+</script>
+
+
+</body>
+</html>
