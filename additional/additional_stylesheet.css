@@ -1,3 +1,9 @@
+/*汎用設定 : フォントサイズを全体的に拡大。*/
+
+body{
+font-size:120%;
+}
+
 
 /*汎用設定 : data-toggle=collapse (ハンバーガーメニューなど) のアニメーション無効化。*/
 .collapsing {
@@ -56,7 +62,7 @@ a.underline{
 text-decoration:underline; /*下線を付ける*/
 }
 
-/*汎用設定 : ナビゲーションバー (.navbar-light のとき) */
+/*汎用設定 : ナビゲーションバー*/
 
 .navbar-light{
 border-bottom:1px #999999 solid; /*薄く境界線を引く*/
@@ -83,52 +89,34 @@ font-weight:bold; /*current のメニューの文字をボールドにする*/
 color:rgba(0,0,0,1); /*メニューの開閉トグルの文字色を濃くする*/
 }
 
-/*汎用設定 : ナビゲーションバー (.navbar-dark のとき) */
-
-.navbar-dark .navbar-nav .nav-link{
-color:rgba(255,255,255,1); /*コントラスト改善*/
+.nav-link{
+display:inline-block; /*display:block; の打ち消し。メニュー項目のフォーカス範囲をラベル記述部分に限定する*/
 }
 
-.navbar-dark .navbar-nav .nav-link:focus{
-color:rgba(255,255,255,1); /*フォーカス時のコントラスト改善*/
-}
-
-.navbar-dark .navbar-nav .nav-link:hover{
-color:rgba(255,255,255,1); /*マウスオーバー時のコントラスト改善*/
-}
-
-.navbar-dark .navbar-nav .active>.nav-link{
-color:rgba(255,255,255,1); /*current のメニューの文字色を濃くする*/
-font-weight:bold; /*current のメニューの文字をボールドにする*/
-}
-
-.navbar-dark .navbar-toggler{
-color:rgba(255,255,255,1); /*メニューの開閉トグルの文字色を濃くする*/
-}
 
 /*汎用設定 : ナビゲーションの開閉ボタン*/
 
-nav button.navbar-toggler[aria-expanded="false"] i.fa-times{
+nav button.navbar-toggler[aria-expanded="false"] svg.fa-times{
 display:none;
 }
 
-nav button.navbar-toggler[aria-expanded="true"] i.fa-bars{
+nav button.navbar-toggler[aria-expanded="true"] svg.fa-bars{
 display:none;
 }
 
-nav.navbar-local button.navbar-toggler[aria-expanded="false"] i.fa-times{
+nav.navbar-local button.navbar-toggler[aria-expanded="false"] svg.fa-times{
 display:none;
 }
 
-nav.navbar-local button.navbar-toggler[aria-expanded="true"] i.fa-plus{
+nav.navbar-local button.navbar-toggler[aria-expanded="true"] svg.fa-plus{
 display:none;
 }
 
-nav.nav-bigfooter button.navbar-toggler[aria-expanded="false"] i.fa-times{
+nav.nav-bigfooter button.navbar-toggler[aria-expanded="false"] svg.fa-times{
 display:none;
 }
 
-nav.nav-bigfooter button.navbar-toggler[aria-expanded="true"] i.fa-plus{
+nav.nav-bigfooter button.navbar-toggler[aria-expanded="true"] svg.fa-plus{
 display:none;
 }
 
