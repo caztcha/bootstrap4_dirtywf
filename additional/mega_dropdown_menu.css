@@ -32,6 +32,7 @@ paddong-bottom:0.3em;
 
 nav div.mega-dropdown-menu a.dropdown-item{
 display:inline;
+font-size:110%;
 }
 
 @media screen and (min-width:992px){
