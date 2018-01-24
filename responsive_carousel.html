@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <!-- Additional CSS -->
 <link rel="stylesheet" type="text/css" href="additional/additional_stylesheet.css" >
@@ -28,7 +28,7 @@
 
 <a class="navbar-brand mr-5 " href="#">[Site ID]</a>
 
-<button class="navbar-toggler" style="border:none;" type="button" data-toggle="collapse" data-target="#navbarTogglerGlobalNav" aria-controls="navbarTogglerGlobalNav" aria-expanded="false" aria-label="サイト全体メニューの開閉"><small aria-hidden="true">MENU</small> <i class="fa fa-bars fa-lg" aria-hidden="true"></i><i class="fa fa-times fa-lg" aria-hidden="true"></i></button>
+<button class="navbar-toggler" style="border:none;" type="button" data-toggle="collapse" data-target="#navbarTogglerGlobalNav" aria-controls="navbarTogglerGlobalNav" aria-expanded="false" aria-label="サイト全体メニューの開閉"><small aria-hidden="true">MENU</small> <i class="fas fa-bars fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button>
 
 <div class="collapse navbar-collapse" id="navbarTogglerGlobalNav">
   <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -43,9 +43,9 @@
     <div class="input-group">
       <label for="search" class="sr-only">サイト内検索</label>
       <input id="search" class="form-control" type="search" placeholder="サイト内検索">
-      <span class="input-group-btn">
-      <button class="btn" type="submit" style="background:#f6f6f6; border-radius:0; border:1px #ced4da solid;"><span class="sr-only">検索</span><i class="fa fa-search" aria-hidden="true"></i></button>
-      </span>
+      <div class="input-group-append">
+      <button class="btn" type="submit" style="background:#f6f6f6; border-radius:0; border:1px #ced4da solid;"><span class="sr-only">検索</span><i class="fas fa-search" aria-hidden="true"></i></button>
+      </div>
     </div>
   </form>
 </div>
@@ -67,8 +67,9 @@
 <li>[Tab] キーによるフォーカス移動および [Enter] キーによる実行が可能。スクリーンリーダーを併用していない場合は、(フォーカスがカルーセル内にあれば) 左右矢印キーでもパネル切り替えが可能。</li>
 <li>ボタン (前のパネル/次のパネル) の aria-label 属性値を日本語化 (slick.js を加筆修正)。</li>
 <li>ボタン (前のパネル/次のパネル)  の配色改善およびフォーカス非可視化 (outline:none;) の無効化 (slick-theme.css を加筆修正)。</li>
+<li>ボタン (前のパネル/次のパネル)  のタップ可能領域を拡大 (44 CSS pixels 四方)。また、ボタンとパネルのタップ可能領域の重なりを解決 (ボタンを優先) するために、ボタン側に z-index 値を追記。</li>
 <li>各パネルがリンクである場合、&lt;a&gt; 要素が親要素の下位にあると (たとえば、div や、箇条書きマークアップであれば li などの中に a があると)、Slick の仕様として、その親要素にもフォーカスが当たるようになっているため、スクリーンリーダーユーザーがリンクを利用できない (&lt;a&gt; 要素にフォーカスが当たってもラベルが読み上げられない) 恐れがある。このため、このサンプルでは、&lt;a&gt; が各パネルの親要素になるようにしている。</li>
-<li>カルーセルの親要素 &lt;div class="responsive-carousel"&gt; に aria-live="polite" を記述。パネルを切り替えるたびにライブで、表示されるパネル (の画像 alt やテキストラベル) がスクリーンリーダーで読み上げられるようにしている。</li>
+<li>カルーセルの親要素 &lt;div class="responsive-carousel"&gt; に aria-live="polite" を記述。パネルを切り替えるたびにライブで、表示されるパネル (の画像 alt やテキストラベル) がスクリーンリーダーで読み上げられるようにしている。(Firefox + NVDA ではうまくいかず。)</li>
 </ul>
 
 <h2 class="my-5">固有の CSS および JavaScript</h2>
@@ -77,7 +78,6 @@
 <li>&lt;head&gt; 内の Additional CSS (for Slick) にある slick.css および slick-theme.css。</li>
 <li>&lt;/body&gt; 手前の Additional JavaScript (for Slick) にある slick.js およびカスタマイズのための script。</li>
 </ul>
-
 
 
 <div class="responsive-carousel mx-3 my-5" aria-live="polite">
@@ -129,12 +129,12 @@
 
 <!-- Optional JavaScript -->
 <!-- Font Awesome CDN -->
-<script src="https://use.fontawesome.com/50f2d27e22.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <!-- Additional JavaScript (for Slick) -->
 <script type="text/javascript" src="additional/slick/slick.js"></script>
