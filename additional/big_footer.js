@@ -1,4 +1,4 @@
-// nav.nav-bigfooter 用の挙動 
+// nav.nav-bigfooter 用の挙動制御 
 
 // ページを読み込んだ時点で画面幅を取得する。
 
