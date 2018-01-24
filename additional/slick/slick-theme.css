@@ -27,8 +27,8 @@
 
     display: block;
 
-    width: 20px;
-    height: 20px;
+    width: 44px; /*タップ可能領域の拡大 20px → 44px*/
+    height: 44px; /*タップ可能領域の拡大 20px → 44px*/
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
@@ -40,6 +40,8 @@
     border: none;
     outline: none;
     background: transparent;
+    
+    z-index:10; /*タップ可能領域を (各パネルよりも) 前面に出す処理*/
 }
 .slick-prev:hover,
 .slick-prev:focus,
@@ -47,7 +49,7 @@
 .slick-next:focus
 {
     color: transparent;
-    /*outline: none;*/ //フォーカス可視化のため、outline:none; を打ち消し。
+    /*outline: none;*/ /*フォーカス可視化のため、outline:none; を打ち消し。*/
     background: transparent;
 }
 .slick-prev:hover:before,
@@ -60,17 +62,17 @@
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before
 {
-    opacity: .25;
+    opacity: .1; /*ボタンが使用不可時の色を薄くする。デフォルト値は .25*/
 }
 
 .slick-prev:before,
 .slick-next:before
 {
     font-family: 'slick';
-    font-size: 20px;
+    font-size: 36px; /*アイコン拡大。デフォルト値は 20px*/
     line-height: 1;
 
-    opacity: .75;
+    opacity: .47; /*フォーカス時の色の変化 (濃くなる) を認識しやすくするために、3:1 を維持できる程度で薄くする。デフォルト値は .75*/
     color: #000000; /* デフォルト値の「white」では背景が白の場合表示されないので、黒にする。*/
    /* background-color:#ffffff;*/  /* ボタンが画像と重ならない配置であれば、背景色を指定してもよい。 */
 
