@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<title>折り畳み &amp; 展開 &mdash; Dirty & Rapid Wireframing Components by @caztcha</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Additional CSS -->
+<link rel="stylesheet" type="text/css" href="additional/additional_stylesheet.css">
+
+<!-- Additional CSS  (for Collapse) -->
+<link rel="stylesheet" type="text/css" href="additional/collapse.css">
+
+<meta name="description" content="">
+
+</head>
+
+<body>
+
+<!------------------------------------------------------ Global Navigation ------------------------------------------------------>
+<!-- RWD 対応せずに常にハンバーガーアイコンで折りたたむ場合は、nav 要素から .navbar-expand-lg 属性をトル。-->
+<nav aria-label="サイト全体メニュー"  class="navbar navbar-expand-lg navbar-light py-lg-0" style="background-color: #f6f6f6;">
+
+<a class="navbar-brand mr-5 " href="#">[Site ID]</a>
+
+<button class="navbar-toggler" style="border:none;" type="button" data-toggle="collapse" data-target="#navbarTogglerGlobalNav" aria-controls="navbarTogglerGlobalNav" aria-expanded="false" aria-label="サイト全体メニューの開閉"><small aria-hidden="true">MENU</small> <i class="fas fa-bars fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button>
+
+<div class="collapse navbar-collapse" id="navbarTogglerGlobalNav">
+  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">ホーム</a></li>
+    <li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">メニュー1</a></li>
+    <li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">メニュー2</a></li>
+    <li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">メニュー3</a></li>
+    <li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">メニュー4</a></li>
+    <li class="nav-item  mr-0"><a class="nav-link py-lg-4" href="#">メニュー5</a></li>
+  </ul>
+  <form class="form-inline my-4 my-lg-0">
+    <div class="input-group">
+      <label for="search" class="sr-only">サイト内検索</label>
+      <input id="search" class="form-control" type="search" placeholder="サイト内検索">
+      <div class="input-group-append">
+      <button class="btn" type="submit" style="background:#f6f6f6; border-radius:0; border:1px #ced4da solid;"><span class="sr-only">検索</span><i class="fas fa-search" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </form>
+</div>
+</nav><!-- End Global Navigation -->
+
+<!------------------------------------------------------ Main Content ------------------------------------------------------>
+<main>
+<div class="container">
+
+<h1 class="my-5">折り畳み &amp; 展開</h1>
+
+<p>詳細情報を折りたたんでいる (必要に応じて開閉できる) UI です。</p>
+
+<h2 class="my-5">アクセシビリティの配慮</h2>
+
+<ul>
+<li>[Tab] キーによるフォーカス移動および [Enter] キーによる実行 (折り畳み/展開の切替) が可能。</li>
+<li>WAI-ARIA の aria-expanded 属性を入れることで、スクリーンリーダーユーザーにも開閉状況を伝えている。</li>
+</ul>
+
+<h2 class="my-5">固有の CSS および JavaScript</h2>
+
+<ul>
+<li>&lt;head&gt; 内の Additional CSS (for Collapse) にある collapse.css。</li>
+</ul>
+
+<div style="height:5em;"></div>
+
+<div class="py-3" style="border-bottom:1px #000000 dotted;"><!--折り畳まれた部分を含む括り-->
+<div><!--見出しと開閉ボタンの括り-->
+<h2 style="display:inline;" class="align-middle">見出し1</h2><button class="collapse-toggler align-middle float-right" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1"><span class="sr-only">詳細情報の開閉</span><i class="fas fa-plus fa-2x" aria-hidden="true"></i><i class="fas fa-times fa-2x" aria-hidden="true"></i></button>
+</div>
+<div class="collapse" id="collapseExample1">
+<p class="mt-3">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <a href="#">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</a>.</p>
+</div>
+</div>
+
+<div class="py-3" style="border-bottom:1px #000000 dotted;"><!--折り畳まれた部分を含む括り-->
+<div><!--見出しと開閉ボタンの括り-->
+<h2 style="display:inline;" class="align-middle">見出し2</h2><button class="collapse-toggler align-middle float-right" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2"><span class="sr-only">詳細情報の開閉</span><i class="fas fa-plus fa-2x" aria-hidden="true"></i><i class="fas fa-times fa-2x" aria-hidden="true"></i></button>
+</div>
+<div class="collapse" id="collapseExample2">
+<p class="mt-3">
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. <a href="#">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</a>, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+</div>
+</div>
+
+<div class="py-3" style="border-bottom:1px #000000 dotted;"><!--折り畳まれた部分を含む括り-->
+<div><!--見出しと開閉ボタンの括り-->
+<h2 style="display:inline;" class="align-middle">見出し3</h2><button class="collapse-toggler align-middle float-right" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3"><span class="sr-only">詳細情報の開閉</span><i class="fas fa-plus fa-2x" aria-hidden="true"></i><i class="fas fa-times fa-2x" aria-hidden="true"></i></button>
+</div>
+<div class="collapse" id="collapseExample3">
+<p class="mt-3">
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. <a href="#">Et harum quidem rerum facilis est et expedita distinctio</a>. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+</div>
+</div>
+
+<div style="height:5em;"></div>
+
+</div><!--end .container-->
+</main>
+<!------------------------------------------------------ End Main Content ------------------------------------------------------>
+
+<!-- Breadcrumb -->
+<div class="container">
+<nav aria-label="現在位置" role="navigation">
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">ホーム</a></li>
+  <li class="breadcrumb-item"><a href="#">XXXXX</a></li>
+  <li class="breadcrumb-item active" aria-current="page">XXXXX</li>
+</ol>
+</nav>
+</div><!-- end of .container--><!--End Breadcrumb-->
+
+
+<!------------------------------------------------------ Footer Area ------------------------------------------------------>
+<div class="footer-area pb-3"  style="background-color: #f6f6f6; border-top:1px #999999 solid;"><!-- 閉じタグは、/body の直前  -->
+
+
+<div class="container">
+<footer class="mt-3">
+<ul class="nav">
+  <li><a class="nav-link pl-0 mr-1" href="#">Terms of Use</a></li>
+  <li><a class="nav-link pl-0 mr-1" href="#">Privacy</a></li>
+  <li><a class="nav-link pl-0 mr-1" href="#">Accessibility</a></li>
+  <li><a class="nav-link pl-0 mr-1" href="#">Contact Us</a></li>
+</ul>
+
+<p class="text-right mt-4 mb-0">&copy; Foo Baa Corporation</p>
+</footer>
+</div><!-- end .container -->
+
+
+</div><!-- end .footer-area -->
+<!------------------------------------------------------ End Footer Area ------------------------------------------------------>
+
+<!-- Optional JavaScript -->
+<!-- Font Awesome CDN -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
