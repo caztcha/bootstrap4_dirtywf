@@ -31,6 +31,17 @@
 <button class="navbar-toggler" style="border:none;" type="button" data-toggle="collapse" data-target="#navbarTogglerGlobalNav" aria-controls="navbarTogglerGlobalNav" aria-expanded="false" aria-label="サイト全体メニューの開閉"><small aria-hidden="true">MENU</small> <i class="fas fa-bars fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button>
 
 <div class="collapse navbar-collapse" id="navbarTogglerGlobalNav">
+
+  <form class="d-lg-none form-inline my-4 my-lg-0"><!--検索窓 (画面幅が lg 以上の場合は非表示) -->
+    <div class="input-group">
+      <label for="search" class="sr-only">サイト内検索</label>
+      <input id="search" class="form-control" type="search" placeholder="サイト内検索">
+      <div class="input-group-append">
+      <button class="btn" type="submit" style="background:#f6f6f6; border-radius:0; border:1px #ced4da solid;"><span class="sr-only">検索</span><i class="fas fa-search" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </form>
+  
   <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
     <li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">ホーム</a></li>
     <li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">メニュー1</a></li>
@@ -39,7 +50,7 @@
     <li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">メニュー4</a></li>
     <li class="nav-item  mr-0"><a class="nav-link py-lg-4" href="#">メニュー5</a></li>
   </ul>
-  <form class="form-inline my-4 my-lg-0">
+  <form class="d-none d-lg-block form-inline my-4 my-lg-0"><!--検索窓 (画面幅が lg 以上の場合に表示) -->
     <div class="input-group">
       <label for="search" class="sr-only">サイト内検索</label>
       <input id="search" class="form-control" type="search" placeholder="サイト内検索">
