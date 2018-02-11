@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<title>デートピッカー</title>
+
+<!-- Bootstrap 3.3.7 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Datepickder CSS -->    
+<link rel="stylesheet" href="additional/bootstrap_accessible_datepicker/css/datepicker.css" type="text/css" />
+    
+<!-- Chrome のデートピッカー呼び出しボタンを消す -->  
+<style>
+input[type=date]::-webkit-calendar-picker-indicator{
+display:none;
+}
+</style>
+
+</head>
+<body>
+
+
+<div class="container">
+
+<h1 class="my-5">デートピッカー</h1>
+
+<form>
+<div role="application">
+<div style="max-width:500px;">
+<div class="form-group col-xs-12">
+<!-- col-xx-xx を記述しないとカレンダー表示がずれる -->
+<label id="date_label" for="date">日付</label>:
+<input class="date form-control" id="date" type="date" placeholder="2018-01-01"  />
+<!-- placeholder は、input type="date" 未対応ブラウザのみ表示される。-->
+</div><!-- end.form-groupp -->
+</div><!-- end style="max-width:500px;" -->
+</div><!-- end role="application" -->
+</form>
+
+
+</div><!-- end .container-->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Datepickder 用 JS -->
+<script type="text/javascript" src="additional/bootstrap_accessible_datepicker/js/locales/ja.js"></script>
+<script type="text/javascript" src="additional/bootstrap_accessible_datepicker/js/datepicker.js"></script>
+<script>
+$(document).ready(function() {
+	$('#date').datepicker({
+		inputFormat: ["yyyy/MM/dd"],
+		outputFormat: 'yyyy-MM-dd',
+		theme: 'bootstrap',
+	});
+});
+</script>
+<!-- inputFormat は、input type="date" の場合、設定しても意味がなさそう。-->
+<!-- outputFormat を yyyy-MM-dd とすることで、input type="date" に反映できる。-->
+
+</body>
+</html>
