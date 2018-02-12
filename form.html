@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<title>フォーム</title>
+
+<style>
+/* ステッパーやスライダー用と併用する input type="number" からスピンボタンを消す */
+
+input.hidespinbutton[type="number"]::-webkit-outer-spin-button,
+input.hidespinbutton[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance:textfield;
+}
+</style>
+
+<!--スライダーのスタイリング-->
+<!-- thanks to http://www.cssportal.com/style-input-range/ -->
+<style>
+input[type=range] {
+  height: 70px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #E3E3E3;
+  border-radius: 0px;
+  border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 44px;
+  width: 44px;
+  border-radius: 44px;
+  background: #666666;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -19.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #E3E3E3;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #E3E3E3;
+  border-radius: 0px;
+  border: 0px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 44px;
+  width: 44px;
+  border-radius: 44px;
+  background: #666666;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #E3E3E3;
+  border: 0px solid #000000;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-fill-upper {
+  background: #E3E3E3;
+  border: 0px solid #000000;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 44px;
+  width: 44px;
+  border-radius: 44px;
+  background: #666666;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #E3E3E3;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #E3E3E3;
+}
+</style>
+
+<!--チェックボックスおよびラジオボタンのスタイリング-->
+<style>
+.custom-checkbox .custom-control-input~.custom-control-label::before {
+background-color: #8e8e8e;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+background-color: #707070;
+}
+
+.custom-radio .custom-control-input~.custom-control-label::before {
+background-color: #8e8e8e;
+}
+
+.custom-radio .custom-control-input:checked~.custom-control-label::before {
+    background-color: #707070;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1 class="my-5">フォーム</h1>
+
+<form>
+
+<h2 class="h3 mt-5 mb-3">テキストボックス : input type="text"</h2>
+<div class="form-group">
+<label for="name">お名前</label>
+<input type="text" class="form-control" id="name">
+</div>
+
+<h2 class="h3 mt-5 mb-3">テキストエリア</h2>
+<div class="form-group">
+<label for="textarea">コメント</label>
+<textarea class="form-control" id="textarea" rows="5"></textarea>
+</div>
+
+<h2 class="h3 mt-5 mb-3">URL : input type="url"</h2>
+<div class="form-group">
+<label for="url">URL</label>
+<input type="url" class="form-control" id="url">
+</div>
+
+<h2 class="h3 mt-5 mb-3">電話番号 : input type="tel"</h2>
+<div class="form-group">
+<label for="telephone">電話番号</label>
+<input type="tel" class="form-control" id="telephone">
+</div>
+
+<h2 class="h3 mt-5 mb-3">メールアドレス : input type="email"</h2>
+<div class="form-group">
+<label for="emailaddress">メールアドレス</label>
+<input type="email" class="form-control" id="emailaddress" aria-describedby="description">
+<small id="description" class="form-text">入力いただいたメールアドレスは、うんたらかんたら。</small>
+</div>
+
+<h2 class="h3 mt-5 mb-3">パスワード : input type="password"</h2>
+<div class="form-group">
+<label for="password">パスワード</label>
+<input type="password" class="form-control" id="password">
+</div>
+
+<h2 class="h3 mt-5 mb-3">数 : input type="number"</h2>
+<div class="form-group">
+<label for="number">数</label>
+<input type="number" class="form-control" id="number" aria-live="polite">
+</div>
+
+<h2 class="h3 mt-5 mb-3">数 (ステッパー) : input type="number"</h2>
+<label for="numberofunit">個数</label>
+<div class="input-group" style="width:200px;">
+<div class="input-group-prepend">
+<button type="button" class="btn btn-lg btn-secondary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+<i class="fas fa-minus fa-lg"></i><span class="sr-only">1つ減らす</span>
+</button>
+</div>
+<input type="number" name="quant[1]" id="numberofunit" class="form-control input-number hidespinbutton" value="0" min="0" max="100" aria-live="polite">
+<div class="input-group-append">
+<button type="button" class="btn btn-lg btn-secondary btn-number" data-type="plus" data-field="quant[1]">
+<i class="fas fa-plus fa-lg"></i><span class="sr-only">1つ増やす</span>
+</button>
+</div>
+</div><!-- end .input-group -->
+
+<h2 class="h3 mt-5 mb-3">日付 : input type="date"</h2>
+<div class="form-group">
+<label for="date">日付</label>
+<input type="date" class="form-control" id="date">
+</div>
+
+<h2 class="h3 mt-5 mb-3">時刻 : input type="time"</h2>
+<div class="form-group">
+<label for="time">時刻</label>
+<input type="time" class="form-control" id="time">
+</div>
+
+<h2 class="h3 mt-5 mb-3">日時 : input type="datetime-local"</h2>
+<div class="form-group">
+<label for="datetime">日時</label>
+<input type="datetime-local" class="form-control" id="datetime">
+</div>
+
+<h2 class="h3 mt-5 mb-3">セレクトメニュー</h2>
+<div class="form-group">
+<label for="selectmenu">選択</label>
+<select class="form-control" id="selectmenu">
+<option>和食</option>
+<option>洋食</option>
+<option>中華</option>
+<option>エスニック</option>
+<option>お菓子</option>
+</select>
+</div>
+
+<h2 class="h3 mt-5 mb-3">スライダー</h2>
+<div class="form-group">
+<label for="range">満足度 (5段階評価)</label>
+<div class="input-group">
+<input type="range" class="form-control" name="amountRange" id="range" min="1" max="5" value="3" oninput="this.form.amountInput.value=this.value" style="border:none;">
+<input type="number" class="hidespinbutton" name="amountInput" min="1" max="5" value="3" oninput="this.form.amountRange.value=this.value" style="width:3em; border:1px #CED4DA solid; border-radius:3px; height:3em; margin:auto;"/>
+</div>
+</div>
+
+<h2 class="h3 mt-5 mb-3">チェックボックス</h2>
+<fieldset>
+<legend>お食事</legend>
+<div class="custom-control custom-checkbox">
+<input class="custom-control-input" type="checkbox" name="checkbox" id="checkbox1" value="checkbox1" checked>
+<label class="custom-control-label" for="checkbox1">和食</label></div>
+<div class="custom-control custom-checkbox">
+<input class="custom-control-input" type="checkbox" name="checkbox" id="checkbox2" value="checkbox2">
+<label class="custom-control-label" for="checkbox2">洋食</label></div>
+<div class="custom-control custom-checkbox">
+<input class="custom-control-input" type="checkbox" name="checkbox" id="checkbox3" value="checkbox3">
+<label class="custom-control-label" for="checkbox3">中華</label></div>
+</fieldset>
+
+<h2 class="h3 mt-5 mb-3">ラジオボタン</h2>
+<fieldset>
+<legend>お食事</legend>
+<div class="custom-control custom-radio">
+<input class="custom-control-input" type="radio" name="radio" id="radio1" value="radio1" checked>
+<label class="custom-control-label" for="radio1">和食</label></div>
+<div class="custom-control custom-radio">
+<input class="custom-control-input" type="radio" name="radio" id="radio2" value="radio2">
+<label class="custom-control-label" for="radio2">洋食</label></div>
+<div class="custom-control custom-radio">
+<input class="custom-control-input" type="radio" name="radio" id="radio3" value="radio3">
+<label class="custom-control-label" for="radio3">中華</label></div>
+</fieldset>
+
+<h2 class="h3 mt-5 mb-3">ラジオボタン (タッチインターフェース)</h2>
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+<label class="btn btn-outline-secondary btn-lg active">
+<input type="radio" name="options" id="option1" autocomplete="off" checked>和食</label>
+<label class="btn btn-outline-secondary btn-lg ">
+<input type="radio" name="options" id="option2" autocomplete="off">洋食</label>
+<label class="btn btn-outline-secondary btn-lg ">
+<input type="radio" name="options" id="option3" autocomplete="off">中華</label>
+</div>
+
+<h2 class="h3 mt-5 mb-3">サブミットボタン</h2>
+<button type="submit" class="btn btn-primary btn-lg px-5 py-3">送信</button>
+
+</form>
+
+<div style="margin-bottom:5em;"></div>
+
+
+</div><!-- end .container-->
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+<!-- Stepper 用の JavaScript -->
+<script>
+//plugin bootstrap minus and plus
+//http://jsfiddle.net/laelitenetwork/puJ6G/
+$('.btn-number').click(function(e){
+    e.preventDefault();
+    
+    fieldName = $(this).attr('data-field');
+    type      = $(this).attr('data-type');
+    var input = $("input[name='"+fieldName+"']");
+    var currentVal = parseInt(input.val());
+    if (!isNaN(currentVal)) {
+        if(type == 'minus') {
+            
+            if(currentVal > input.attr('min')) {
+                input.val(currentVal - 1).change();
+            } 
+            if(parseInt(input.val()) == input.attr('min')) {
+                $(this).attr('disabled', true);
+            }
+
+        } else if(type == 'plus') {
+
+            if(currentVal < input.attr('max')) {
+                input.val(currentVal + 1).change();
+            }
+            if(parseInt(input.val()) == input.attr('max')) {
+                $(this).attr('disabled', true);
+            }
+
+        }
+    } else {
+        input.val(0);
+    }
+});
+$('.input-number').focusin(function(){
+   $(this).data('oldValue', $(this).val());
+});
+$('.input-number').change(function() {
+    
+    minValue =  parseInt($(this).attr('min'));
+    maxValue =  parseInt($(this).attr('max'));
+    valueCurrent = parseInt($(this).val());
+    
+    name = $(this).attr('name');
+    if(valueCurrent >= minValue) {
+        $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
+    } else {
+        alert('Sorry, the minimum value was reached');
+        $(this).val($(this).data('oldValue'));
+    }
+    if(valueCurrent <= maxValue) {
+        $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
+    } else {
+        alert('Sorry, the maximum value was reached');
+        $(this).val($(this).data('oldValue'));
+    }
+    
+    
+});
+$(".input-number").keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+             // Allow: Ctrl+A
+            (e.keyCode == 65 && e.ctrlKey === true) || 
+             // Allow: home, end, left, right
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+</script>
+
+
+</body>
+</html>
