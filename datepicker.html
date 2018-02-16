@@ -13,12 +13,19 @@
 <!-- Datepickder CSS -->    
 <link rel="stylesheet" href="additional/bootstrap_accessible_datepicker/css/datepicker.css" type="text/css" />
     
-<!-- Chrome のデートピッカー呼び出しボタンを消す -->  
+<!-- Chrome のデートピッカー呼び出しボタンおよびスピンボタンを消す -->  
 <style>
 input[type="date"]::-webkit-calendar-picker-indicator{
 display:none;
 }
+
+input[type=date]::-webkit-inner-spin-button{
+display:none;
+}
 </style>
+
+
+
 
 <!-- iOS 向けに表示調整 -->
 <style>
