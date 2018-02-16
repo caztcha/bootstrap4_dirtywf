@@ -126,38 +126,36 @@ input[type=range]:focus::-ms-fill-upper {
 <style>
 .custom-checkbox .custom-control-input~.custom-control-label::before {
 background-color: #8e8e8e;
-height:1.2em;
-width:1.2em;
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 background-color: #707070;
-height:1.2em;
-width:1.2em;
 }
 
 .custom-radio .custom-control-input~.custom-control-label::before {
 background-color: #8e8e8e;
-height:1.2em;
-width:1.2em;
 }
 
 .custom-radio .custom-control-input:checked~.custom-control-label::before {
 background-color: #707070;
-height:1.2em;
-width:1.2em;
 }
 
-.custom-control-label{
-padding-left:0.3em;
-margin-bottom:0.3em;
-}
+.custom-control-label::before{
+height:1.2em;
+width:1.2em;
+top:.2rem;
+} 
 
 .custom-control-label::after{
 background-size:50% 50%;
 height:1.2em;
 width:1.2em;
+top:.2rem;
 } 
+
+.custom-control-label{
+padding-left:0.3em;
+}
 </style>
 
 <!-- input type が date、time、datetime-local のスタイリング調整-->
