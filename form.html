@@ -126,18 +126,44 @@ input[type=range]:focus::-ms-fill-upper {
 <style>
 .custom-checkbox .custom-control-input~.custom-control-label::before {
 background-color: #8e8e8e;
+height:1.2em;
+width:1.2em;
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 background-color: #707070;
+height:1.2em;
+width:1.2em;
 }
 
 .custom-radio .custom-control-input~.custom-control-label::before {
 background-color: #8e8e8e;
+height:1.2em;
+width:1.2em;
 }
 
 .custom-radio .custom-control-input:checked~.custom-control-label::before {
-    background-color: #707070;
+background-color: #707070;
+height:1.2em;
+width:1.2em;
+}
+
+.custom-control-label{
+padding-left:0.3em;
+margin-bottom:0.3em;
+}
+
+.custom-control-label::after{
+background-size:50% 50%;
+height:1.2em;
+width:1.2em;
+} 
+</style>
+
+<!-- input type が date、time、datetime-local のスタイリング調整-->
+<style>
+input[type=date], input[type=datetime-local], input[type=month], input[type=time] {
+-webkit-appearance: none;
 }
 </style>
 
@@ -274,7 +300,7 @@ background-color: #8e8e8e;
 <h2 class="h3 mt-5 mb-3">セレクトメニュー</h2>
 <div class="form-group">
 <label for="selectmenu">選択</label>
-<select class="form-control" id="selectmenu">
+<select class="form-control custom-select" id="selectmenu">
 <option>和食</option>
 <option>洋食</option>
 <option>中華</option>
@@ -285,10 +311,10 @@ background-color: #8e8e8e;
 
 <h2 class="h3 mt-5 mb-3">スライダー</h2>
 <div class="form-group">
-<label for="range">満足度 (5段階評価)</label>
+<label for="range">満足度 (7段階評価)</label>
 <div class="input-group">
-<input type="range" class="form-control" name="amountRange" id="range" min="1" max="5" value="3" oninput="this.form.amountInput.value=this.value" style="border:none;">
-<input type="number" class="hidespinbutton" name="amountInput" min="1" max="5" value="3" oninput="this.form.amountRange.value=this.value" style="width:3em; border:1px #CED4DA solid; border-radius:3px; height:3em; margin:auto;"/>
+<input type="range" class="form-control" name="amountRange" id="range" min="1" max="7" value="4" oninput="this.form.amountInput.value=this.value" style="border:none;">
+<input type="number" class="hidespinbutton" name="amountInput" min="1" max="7" value="4" oninput="this.form.amountRange.value=this.value" style="width:3em; border:1px #CED4DA solid; border-radius:3px; height:3em; margin:auto;"/>
 </div>
 </div>
 
@@ -320,7 +346,7 @@ background-color: #8e8e8e;
 <label class="custom-control-label" for="radio3">中華</label></div>
 </fieldset>
 
-<h2 class="h3 mt-5 mb-3">ラジオボタン (タッチインターフェース)</h2>
+<h2 class="h3 mt-5 mb-3">選択ボタン (ソースはラジオボタン)</h2>
 <div class="btn-group btn-group-toggle" data-toggle="buttons">
 <label class="btn btn-outline-secondary btn-lg active">
 <input type="radio" name="options" id="option1" autocomplete="off" checked>和食</label>
