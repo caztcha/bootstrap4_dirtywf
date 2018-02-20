@@ -137,7 +137,8 @@ div.datepicker-calendar .offscreen {
 	top: -100em;
 }
 .datepicker-overlay {
-	background: #777;
+	/*background: #777;*/
+	background: #ffffff
     display: none;        
     position: fixed;   
     top: 0;                  

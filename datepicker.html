@@ -53,7 +53,7 @@ padding-bottom:0;
 <label id="date_label" for="date">日付</label>:
 <input class="date" id="date" type="date" placeholder="2018-01-01" />
 </div><!-- end.form-group -->
-</div><!-- end style="max-width:500px;" -->
+</div><!-- end style="max-width:500px;" --><br style="clear:both;"/><!--回り込みの解除-->
 </div><!-- end role="application" -->
 </div>
 </form>
@@ -74,6 +74,7 @@ $(document).ready(function() {
 		inputFormat: ["yyyy/MM/dd"],
 		outputFormat: 'yyyy-MM-dd',
 		theme: 'bootstrap',
+		modal: true,
 	});
 });
 </script>

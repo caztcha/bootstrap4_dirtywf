@@ -8,7 +8,7 @@
 		        "buttonLabel": "カレンダーで日付を選択",
 		        "prevButtonLabel": "前の月",
 		        "nextButtonLabel": "次の月",
-		        "closeButtonTitle": "閉じる",
+		        "closeButtonTitle": "カレンダーを閉じる",
 		        "closeButtonLabel": "カレンダーを閉じる",
 		        "prevMonthButtonLabel": "前の年",
 		        "prevYearButtonLabel": "前の20年",
