@@ -5,11 +5,12 @@ font-size:120%;
 }
 
 
-/*汎用設定 : data-toggle=collapse (ハンバーガーメニューなど) のアニメーション無効化。*/
-.collapsing {
+/*汎用設定 : data-toggle="collapse" (ハンバーガーメニューなど) のアニメーション無効化。*/
+/*.collapsing {
   -webkit-transition: none;
   transition: none;
 }
+*/
 
 /*汎用設定 : ボタン hover 時のカーソル*/
 
@@ -101,6 +102,10 @@ display:none;
 }
 
 nav button.navbar-toggler[aria-expanded="true"] svg.fa-bars{
+display:none;
+}
+
+nav button.navbar-toggler[aria-expanded="true"] svg.fa-search{
 display:none;
 }
 
