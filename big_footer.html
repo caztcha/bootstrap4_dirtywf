@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<title>ビッグフッター &mdash; Dirty & Rapid Wireframing Components by @caztcha</title>
+<title>フッター (含ビッグフッター) &mdash; Dirty & Rapid Wireframing Components by @caztcha</title>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,159 +18,108 @@
 
 <body>
 
-<!------------------------------------------------------ Global Navigation ------------------------------------------------------>
-<!-- RWD 対応せずに常にハンバーガーアイコンで折りたたむ場合は、nav 要素から .navbar-expand-lg 属性をトル。-->
-<nav aria-label="サイト全体メニュー"  class="navbar navbar-expand-lg navbar-light py-lg-0" style="background-color: #f6f6f6;">
-
-<a class="navbar-brand mr-5 " href="#">[Site ID]</a>
-
-<button class="navbar-toggler" style="border:none;" type="button" data-toggle="collapse" data-target="#navbarTogglerGlobalNav" aria-controls="navbarTogglerGlobalNav" aria-expanded="false" aria-label="サイト全体メニューの開閉"><small aria-hidden="true">MENU</small> <i class="fas fa-bars fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button>
-
-<div class="collapse navbar-collapse" id="navbarTogglerGlobalNav">
-
-  <form class="d-lg-none form-inline my-4 my-lg-0"><!--検索窓 (画面幅が lg 以上の場合は非表示) -->
-    <div class="input-group">
-      <label for="search" class="sr-only">サイト内検索</label>
-      <input id="search" class="form-control" type="search" placeholder="サイト内検索">
-      <div class="input-group-append">
-      <button class="btn" type="submit" style="background:#f6f6f6; border-radius:0; border:1px #ced4da solid;"><span class="sr-only">検索</span><i class="fas fa-search" aria-hidden="true"></i></button>
-      </div>
-    </div>
-  </form>
-  
-  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-    <li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">ホーム</a></li>
-    <li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">メニュー1</a></li>
-    <li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">メニュー2</a></li>
-    <li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">メニュー3</a></li>
-    <li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">メニュー4</a></li>
-    <li class="nav-item  mr-0"><a class="nav-link py-lg-4" href="#">メニュー5</a></li>
-  </ul>
-  <form class="d-none d-lg-block form-inline my-4 my-lg-0"><!--検索窓 (画面幅が lg 以上の場合に表示) -->
-    <div class="input-group">
-      <label for="search_lg" class="sr-only">サイト内検索</label>
-      <input id="search_lg" class="form-control" type="search" placeholder="サイト内検索">      <div class="input-group-append">
-      <button class="btn" type="submit" style="background:#f6f6f6; border-radius:0; border:1px #ced4da solid;"><span class="sr-only">検索</span><i class="fas fa-search" aria-hidden="true"></i></button>
-      </div>
-    </div>
-  </form>
-</div>
-</nav><!-- End Global Navigation -->
-
-
-<!------------------------------------------------------ Main Content ------------------------------------------------------>
-<main>
+<main role="main">
 <div class="container">
 
-<h1 class="my-5">ビッグフッター</h1>
+<h1 class="my-5">フッター (含ビッグフッター)</h1>
 
-<p>
-レスポンシブなビッグフッターです。
-</p>
+<p>サイト共通フッターです。</p>
+<p>ビッグフッター部分はレスポンシブデザインに対応していて、画面幅が Bootstrap の "Medium" 以下 (992px未満) では、メニューが折り畳まれます。</p>
 
 <h2 class="my-5">アクセシビリティの配慮</h2>
 
 <ul>
-<li>キーボード操作の担保。</li>
-<li>開閉時のスクリーンリーダー読み上げフィードバック。(aria-expanded)</li>
-<li>&lt;nav&gt; 要素に aria-label を記述し、スクリーンリーダー利用者に対してナビゲーションの種類を明示。</li>
+<li>画面幅が "Medium" 以下の際、メニューの開閉がキーボード操作でも可能です。また、開閉に応じて aria-expanded の値が変わります (false/true)。</li>
+<li>ビッグフッター部分 (&lt;nav&gt; 要素) に「aria-label="サイトマップ"」を記述し、スクリーンリーダー利用者に対してナビゲーションの種類を明示しています。</li>
 </ul>
 
 <h2 class="my-5">固有の CSS および JavaScript</h2>
 
 <ul class="mb-5">
 <li>HTML の中にインラインでスタイルを調整しています。</li>
-<li>&lt;/body&gt; 手前の Additional JavaScript (for Big Footer) にある big_footer.js。画面幅に応じた class 適用を調整しています。</li>
+<li>&lt;/body&gt; 手前の Additional JavaScript (for Big Footer)。画面幅に応じた class 適用を調整しています。</li>
 </ul>
 
 </div><!-- End .container -->
 </main>
-<!------------------------------------------------------ End Main Content ------------------------------------------------------>
 
-<!-- Breadcrumb -->
+
+<!------- ★ここから★ ------->
+<div class="footer-area pb-3"  style="background-color: #fbfbfb; border-top:1px #999999 solid;"><!-- 閉じタグは、/body の直前  -->
+
+<!-- ★ビッグフッターここから★ -->
 <div class="container">
-<nav aria-label="現在位置" role="navigation">
-<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="#">ホーム</a></li>
-  <li class="breadcrumb-item"><a href="#">XXXXX</a></li>
-  <li class="breadcrumb-item active" aria-current="page">XXXXX</li>
-</ol>
-</nav>
-</div><!-- end of .container--><!--End Breadcrumb-->
-
-
-
-<!------------------------------------------------------ Footer Area ------------------------------------------------------>
-<div class="footer-area pb-3"  style="background-color: #f6f6f6; border-top:1px #999999 solid;"><!-- 閉じタグは、/body の直前  -->
-
-<!------------------------------------------------------ (Big Footer) ------------------------------------------------------>
-<div class="container">
-<nav class="mt-4 nav-bigfooter" label="サイトマップ">
+<nav class="mt-4 nav-bigfooter" label="サイトマップ" role="navigation">
 <div class="row">
-    <div class="col-lg">
-      <h2 class="h5 mb-3"><a href="#">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a> 
-      <button class="navbar-toggler d-lg-none float-right" style="border:none;" type="button" data-toggle="collapse" data-target="#bigfooter-1" aria-controls="bigfooter-1" aria-expanded="false" aria-label="メニューの開閉"><i class="fas fa-plus fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button></h2>
-      <div class="collapse" id="bigfooter-1">
-      <ul>
-        <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
-      </ul>
-      </div>
-    </div><!-- end .col-lg-->
-    <div class="col-lg">
-      <h2 class="h5 mb-3"><a href="#">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a> 
-      <button class="navbar-toggler d-lg-none float-right" style="border:none;" type="button" data-toggle="collapse" data-target="#bigfooter-2" aria-controls="bigfooter-2" aria-expanded="false" aria-label="メニューの開閉"><i class="fas fa-plus fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button></h2>
-      <div  class="collapse" id="bigfooter-2">
-      <ul>
-        <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
-      </ul>
-      </div>
-    </div><!-- end .col-lg-->
-    <div class="col-lg">
-      <h2 class="h5 mb-3"><a href="#">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a> 
-      <button class="navbar-toggler d-lg-none float-right" style="border:none;" type="button" data-toggle="collapse" data-target="#bigfooter-3" aria-controls="bigfooter-3" aria-expanded="false" aria-label="メニューの開閉"><i class="fas fa-plus fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button></h2>
-      <div  class="collapse" id="bigfooter-3">
-      <ul>
-        <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
-        <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
-      </ul>
-      </div>
-      <h2 class="h5 mb-3"><a href="#">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></h2>
-      <h2 class="h5 mb-3"><a href="#">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></h2>
-    </div><!-- end .col-lg-->
-</div><!-- end .row -->
+
+<div class="col-lg">
+<h2 class="h5" style="line-height:2;"><a href="#">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a> 
+<button class="navbar-toggler d-lg-none float-right" style="border:none; width:44px; height:44px;" type="button" data-toggle="collapse" data-target="#bigfooter-1" aria-controls="bigfooter-1" aria-expanded="false" aria-label="メニューの開閉"><i class="fas fa-plus fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button></h2>
+<div class="collapse" id="bigfooter-1">
+<ul>
+<li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
+<li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
+<li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
+<li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
+<li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
+<li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
+<li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
+</ul>
+</div><!-- End .collapse -->
+</div><!-- End .col-lg-->
+
+<div class="col-lg">
+<h2 class="h5" style="line-height:2;"><a href="#">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a> 
+<button class="navbar-toggler d-lg-none float-right" style="border:none; width:44px; height:44px;" type="button" data-toggle="collapse" data-target="#bigfooter-2" aria-controls="bigfooter-2" aria-expanded="false" aria-label="メニューの開閉"><i class="fas fa-plus fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button></h2>
+<div  class="collapse" id="bigfooter-2">
+<ul>
+<li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
+<li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
+<li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
+<li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
+<li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
+</ul>
+</div><!-- End .collapse -->
+</div><!-- End .col-lg-->
+
+ <div class="col-lg">
+<h2 class="h5" style="line-height:2;"><a href="#">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a> 
+<button class="navbar-toggler d-lg-none float-right" style="border:none; width:44px; height:44px;" type="button" data-toggle="collapse" data-target="#bigfooter-3" aria-controls="bigfooter-3" aria-expanded="false" aria-label="メニューの開閉"><i class="fas fa-plus fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button></h2>
+<div  class="collapse" id="bigfooter-3">
+<ul>
+<li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
+<li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
+<li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
+</ul>
+</div><!-- End .collapse -->
+<h2 class="h5" style="line-height:2;"><a href="#">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></h2>
+<h2 class="h5" style="line-height:2;"><a href="#">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></h2>
+</div><!-- End .col-lg-->
+
+</div><!-- End .row -->
 </nav>
 
 <hr>
-</div><!-- end .container -->
-<!------------------------------------------------------ (End Big Footer) ------------------------------------------------------>
+</div><!-- End .container -->
+<!-- ★ビッグフッターここまで★ -->
 
 <div class="container">
-<footer class="mt-3">
-<ul class="nav">
-  <li><a class="nav-link pl-0 mr-1" href="#">Terms of Use</a></li>
-  <li><a class="nav-link pl-0 mr-1" href="#">Privacy</a></li>
-  <li><a class="nav-link pl-0 mr-1" href="#">Accessibility</a></li>
-  <li><a class="nav-link pl-0 mr-1" href="#">Contact Us</a></li>
+<footer class="mt-3" role="contentinfo">
+<ul class="nav nav-fill">
+  <li class="nav-item"><a class="nav-link" href="#">Terms of Use</a></li>
+  <li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
+  <li class="nav-item"><a class="nav-link" href="#">Accessibility</a></li>
+  <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
 </ul>
 
 <p class="text-right mt-4 mb-0">&copy; Foo Baa Corporation</p>
 </footer>
-</div><!-- end .container -->
+</div><!-- End .container -->
 
 
-</div><!-- end .footer-area -->
-<!------------------------------------------------------ End Footer Area ------------------------------------------------------>
+</div><!-- End .footer-area -->
+<!------- ★ここまで★ ------->
+
 
 <!-- Optional JavaScript -->
 <!-- Font Awesome CDN -->
@@ -181,8 +130,40 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<!-- Additional JavaScript (for Big Footer) -->
-<script src="additional/big_footer.js"></script>
+<!-- ★Additional JavaScript (for Big Footer)★ -->
+<script>
+// ページを読み込んだ時点で画面幅を取得する。
+
+$(function() {
+    var w = $(window).width();
+    var x = 992; //値の992 は Bootstrap の lg に合わせている。
+    if (w >= x) {
+       $('#bigfooter-1').removeClass('collapse');
+       $('#bigfooter-2').removeClass('collapse');
+       $('#bigfooter-3').removeClass('collapse');
+    } else {
+       $('#bigfooter-1').addClass('collapse');
+       $('#bigfooter-2').addClass('collapse');
+       $('#bigfooter-3').addClass('collapse');
+    }
+});
+
+//ユーザーが画面幅をリサイズした際に画面幅を取得する。
+
+$(window).resize(function(){
+    var w = $(window).width();
+    var x = 992; //値の992 は Bootstrap の lg に合わせている。
+    if (w >= x) {
+        $('#bigfooter-1').removeClass('collapse');
+        $('#bigfooter-2').removeClass('collapse');
+        $('#bigfooter-3').removeClass('collapse');
+        } else {
+        $('#bigfooter-1').addClass('collapse');
+        $('#bigfooter-2').addClass('collapse');
+        $('#bigfooter-3').addClass('collapse');
+        }
+});
+</script>
 
 
 </body>

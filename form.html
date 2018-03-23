@@ -12,19 +12,18 @@
 <!-- Additional CSS -->
 <link rel="stylesheet" type="text/css" href="additional/additional_stylesheet.css" >
 
-<meta name="description" content="">
-
+<!-- ★Additional CSS (for Form)★ -->
 <style>
 /* ステッパーやスライダー用と併用する input type="number" からスピンボタンを消す */
 
 input.hidespinbutton[type="number"]::-webkit-outer-spin-button,
 input.hidespinbutton[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+-webkit-appearance: none;
+margin: 0;
 }
 
 input[type="number"] {
-    -moz-appearance:textfield;
+-moz-appearance:textfield;
 }
 </style>
 
@@ -32,93 +31,105 @@ input[type="number"] {
 <!-- thanks to http://www.cssportal.com/style-input-range/ -->
 <style>
 input[type=range] {
-  height: 70px;
-  -webkit-appearance: none;
-  margin: 10px 0;
-  width: 100%;
+height: 70px;
+-webkit-appearance: none;
+margin: 10px 0;
+width: 100%;
 }
+
 input[type=range]:focus {
-  outline: none;
+outline: none;
 }
+
 input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 5px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 0px 0px 0px #000000;
-  background: #E3E3E3;
-  border-radius: 0px;
-  border: 0px solid #000000;
+width: 100%;
+height: 5px;
+cursor: pointer;
+animate: 0.2s;
+box-shadow: 0px 0px 0px #000000;
+background: #E3E3E3;
+border-radius: 0px;
+border: 0px solid #000000;
 }
+
 input[type=range]::-webkit-slider-thumb {
-  box-shadow: 0px 0px 0px #000000;
-  border: 0px solid #000000;
-  height: 44px;
-  width: 44px;
-  border-radius: 44px;
-  background: #666666;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -19.5px;
+box-shadow: 0px 0px 0px #000000;
+border: 0px solid #000000;
+height: 44px;
+width: 44px;
+border-radius: 44px;
+background: #666666;
+cursor: pointer;
+-webkit-appearance: none;
+margin-top: -19.5px;
 }
+
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #E3E3E3;
+background: #E3E3E3;
 }
+
 input[type=range]::-moz-range-track {
-  width: 100%;
-  height: 5px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 0px 0px 0px #000000;
-  background: #E3E3E3;
-  border-radius: 0px;
-  border: 0px solid #000000;
+width: 100%;
+height: 5px;
+cursor: pointer;
+animate: 0.2s;
+box-shadow: 0px 0px 0px #000000;
+background: #E3E3E3;
+border-radius: 0px;
+border: 0px solid #000000;
 }
+
 input[type=range]::-moz-range-thumb {
-  box-shadow: 0px 0px 0px #000000;
-  border: 0px solid #000000;
-  height: 44px;
-  width: 44px;
-  border-radius: 44px;
-  background: #666666;
-  cursor: pointer;
+box-shadow: 0px 0px 0px #000000;
+border: 0px solid #000000;
+height: 44px;
+width: 44px;
+border-radius: 44px;
+background: #666666;
+cursor: pointer;
 }
+
 input[type=range]::-ms-track {
-  width: 100%;
-  height: 5px;
-  cursor: pointer;
-  animate: 0.2s;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
+width: 100%;
+height: 5px;
+cursor: pointer;
+animate: 0.2s;
+background: transparent;
+border-color: transparent;
+color: transparent;
 }
+
 input[type=range]::-ms-fill-lower {
-  background: #E3E3E3;
-  border: 0px solid #000000;
-  border-radius: 0px;
-  box-shadow: 0px 0px 0px #000000;
+background: #E3E3E3;
+border: 0px solid #000000;
+border-radius: 0px;
+box-shadow: 0px 0px 0px #000000;
 }
+
 input[type=range]::-ms-fill-upper {
-  background: #E3E3E3;
-  border: 0px solid #000000;
-  border-radius: 0px;
-  box-shadow: 0px 0px 0px #000000;
+background: #E3E3E3;
+border: 0px solid #000000;
+border-radius: 0px;
+box-shadow: 0px 0px 0px #000000;
 }
+
 input[type=range]::-ms-thumb {
-  margin-top: 1px;
-  box-shadow: 0px 0px 0px #000000;
-  border: 0px solid #000000;
-  height: 44px;
-  width: 44px;
-  border-radius: 44px;
-  background: #666666;
-  cursor: pointer;
+margin-top: 1px;
+box-shadow: 0px 0px 0px #000000;
+border: 0px solid #000000;
+height: 44px;
+width: 44px;
+border-radius: 44px;
+background: #666666;
+cursor: pointer;
 }
+
 input[type=range]:focus::-ms-fill-lower {
-  background: #E3E3E3;
+background: #E3E3E3;
 }
+
 input[type=range]:focus::-ms-fill-upper {
-  background: #E3E3E3;
+background: #E3E3E3;
 }
 </style>
 
@@ -165,53 +176,13 @@ height: 2.375rem;
 }
 </style>
 
+<meta name="description" content="">
+
 </head>
+
 <body>
 
-<!------------------------------------------------------ Global Navigation ------------------------------------------------------>
-<!-- RWD 対応せずに常にハンバーガーアイコンで折りたたむ場合は、nav 要素から .navbar-expand-lg 属性をトル。-->
-<nav aria-label="サイト全体メニュー"  class="navbar navbar-expand-lg navbar-light py-lg-0" style="background-color: #f6f6f6;">
-
-<a class="navbar-brand mr-5 " href="#">[Site ID]</a>
-
-<button class="navbar-toggler" style="border:none;" type="button" data-toggle="collapse" data-target="#navbarTogglerGlobalNav" aria-controls="navbarTogglerGlobalNav" aria-expanded="false" aria-label="サイト全体メニューの開閉"><small aria-hidden="true">MENU</small> <i class="fas fa-bars fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button>
-
-<div class="collapse navbar-collapse" id="navbarTogglerGlobalNav">
-
-<form class="d-lg-none form-inline my-4 my-lg-0"><!--検索窓 (画面幅が lg 以上の場合は非表示) -->
-<div class="input-group">
-<label for="search" class="sr-only">サイト内検索</label>
-<input id="search" class="form-control" type="search" placeholder="サイト内検索">
-<div class="input-group-append">
-<button class="btn" type="submit" style="background:#f6f6f6; border-radius:0; border:1px #ced4da solid;"><span class="sr-only">検索</span><i class="fas fa-search" aria-hidden="true"></i></button>
-</div>
-</div>
-</form>
-  
-<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-<li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">ホーム</a></li>
-<li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">メニュー1</a></li>
-<li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">メニュー2</a></li>
-<li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">メニュー3</a></li>
-<li class="nav-item  mr-3"><a class="nav-link py-lg-4" href="#">メニュー4</a></li>
-<li class="nav-item  mr-0"><a class="nav-link py-lg-4" href="#">メニュー5</a></li>
-</ul>
-
-<form class="d-none d-lg-block form-inline my-4 my-lg-0"><!--検索窓 (画面幅が lg 以上の場合に表示) -->
-<div class="input-group">
-<label for="search_lg" class="sr-only">サイト内検索</label>
-<input id="search_lg" class="form-control" type="search" placeholder="サイト内検索">
-<div class="input-group-append">
-<button class="btn" type="submit" style="background:#f6f6f6; border-radius:0; border:1px #ced4da solid;"><span class="sr-only">検索</span><i class="fas fa-search" aria-hidden="true"></i></button>
-</div>
-</div>
-</form>
-
-</div>
-</nav><!-- End Global Navigation -->
-
-<!------------------------------------------------------ Main Content ------------------------------------------------------>
-<main>
+<main role="main">
 <div class="container">
 
 <h1 class="my-5">フォーム</h1>
@@ -370,40 +341,7 @@ height: 2.375rem;
 
 </div><!-- end .container-->
 </main>
-<!------------------------------------------------------ End Main Content ------------------------------------------------------>
 
-<!-- Breadcrumb -->
-<div class="container">
-<nav aria-label="現在位置" role="navigation">
-<ol class="breadcrumb">
-<li class="breadcrumb-item"><a href="#">ホーム</a></li>
-<li class="breadcrumb-item"><a href="#">XXXXX</a></li>
-<li class="breadcrumb-item active" aria-current="page">XXXXX</li>
-</ol>
-</nav>
-</div><!-- end of .container--><!--End Breadcrumb-->
-
-
-<!------------------------------------------------------ Footer Area ------------------------------------------------------>
-<div class="footer-area pb-3"  style="background-color: #f6f6f6; border-top:1px #999999 solid;"><!-- 閉じタグは、/body の直前  -->
-
-
-<div class="container">
-<footer class="mt-3">
-<ul class="nav">
-<li><a class="nav-link pl-0 mr-1" href="#">Terms of Use</a></li>
-<li><a class="nav-link pl-0 mr-1" href="#">Privacy</a></li>
-<li><a class="nav-link pl-0 mr-1" href="#">Accessibility</a></li>
-<li><a class="nav-link pl-0 mr-1" href="#">Contact Us</a></li>
-</ul>
-
-<p class="text-right mt-4 mb-0">&copy; Foo Baa Corporation</p>
-</footer>
-</div><!-- end .container -->
-
-
-</div><!-- end .footer-area -->
-<!------------------------------------------------------ End Footer Area ------------------------------------------------------>
 
 <!-- Optional JavaScript -->
 <!-- Font Awesome CDN -->

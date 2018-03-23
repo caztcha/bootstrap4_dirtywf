@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<title>ナビゲーションメニュー (カテゴリー/ローカルナビゲーション) &mdash; Dirty & Rapid Wireframing Components by @caztcha</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Additional CSS -->
+<link rel="stylesheet" type="text/css" href="additional/additional_stylesheet.css" >
+
+<meta name="description" content="">
+
+</head>
+
+<body>
+
+<!------- サイト共通ヘッダー (ダミー) ------->
+<nav aria-label="ホームへのリンクおよびサイト内検索" role="navigation" class="navbar navbar-light" style="background-color: #fbfbfb;">
+<!--<div class="container">--><!-- ヘッダー内のコンテンツを container 幅で収めたい場合は、この div を有効にする。 -->
+
+<button class="navbar-toggler px-1" style="border:none;" type="button" data-toggle="collapse" data-target="#navbarTogglerHeaderMenu" aria-controls="navbarTogglerHeaderMenu" aria-expanded="false" aria-label="サイト全体メニューの開閉"><i class="fas fa-bars fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button>
+
+<div class="collapse navbar-collapse" id="navbarTogglerHeaderMenu">
+<!--メニュー項目-->
+<ul class="navbar-nav mr-auto mt-2">
+<li class="nav-item"><a class="nav-link" href="#">メニュー1</a></li>
+<li class="nav-item"><a class="nav-link" href="#">メニュー2</a></li>
+<li class="nav-item"><a class="nav-link" href="#">メニュー3</a></li>
+<li class="nav-item"><a class="nav-link" href="#">メニュー4</a></li>
+<li class="nav-item"><a class="nav-link" href="#">メニュー5</a></li>
+</ul>
+</div><!-- End #navbarTogglerHeaderMenu -->
+
+<div style="position:absolute; top:25px; left:50%; transform: translate(0, -50%); -webkit-transform: translate(-50%, -50%);"><a class="navbar-brand mx-auto" href="#">[Site ID]</a></div>
+
+<button class="navbar-toggler px-1" style="border:none; position:absolute; top:10px; right:14px;" type="button" data-toggle="collapse" data-target="#navbarTogglerHeaderSearch" aria-controls="navbarTogglerHeaderSearch" aria-expanded="false" aria-label="サイト内検索の開閉" role="search"><i class="fas fa-search fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button>
+
+<div class="collapse navbar-collapse" id="navbarTogglerHeaderSearch" style="position:absolute; top:0; width:80%;">
+<!--検索窓-->
+<form class="my-2" role="search">
+<div class="input-group">
+<label for="search" class="sr-only">サイト内検索</label>
+<input id="search" class="form-control" type="search" placeholder="サイト内検索">
+<div class="input-group-append">
+<button class="btn" type="submit" style="background:#fbfbfb; border-radius:0; border:1px #ced4da solid;"><span class="sr-only">検索</span><i class="fas fa-search" aria-hidden="true"></i></button>
+</div>
+</div>
+</form>
+</div><!-- End #navbarTogglerHeaderSearch -->
+
+<!--</div>--><!-- End .container -->
+</nav>
+<!------- サイト共通ヘッダー (ダミー) ここまで ------->
+
+<!------- ★ここから★ ------->
+<nav aria-label="カテゴリーメニュー" class="navbar navbar-local sticky-top navbar-expand-lg navbar-light" style="background-color: #ffffff;">
+<!--<div class="container">--><!-- ヘッダー内のコンテンツを container 幅で収めたい場合は、この div を有効にする。 -->
+
+<a class="navbar-brand mr-5" href="#"><i class="fas fa-chevron-left fa-sm" aria-hidden="true"></i> Category Home</a>
+<button class="navbar-toggler px-1" style="border:none;" type="button" data-toggle="collapse" data-target="#navbarTogglerLocalNav" aria-controls="navbarTogglerLocalNav" aria-expanded="false" aria-label="カテゴリーメニューの開閉"><small aria-hidden="true">Menu</small> <i class="fas fa-plus fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button>
+
+<div class="collapse navbar-collapse" id="navbarTogglerLocalNav">
+  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー1</a></li>
+    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー2</a></li>
+    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー3</a></li>
+    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー4</a></li>
+    <li class="nav-item"><a class="nav-link mr-2" href="#">メニュー5</a></li>
+  </ul>
+</div>
+<!--</div>--><!-- End .container -->
+</nav>
+<!------- ★ここまで★ ------->
+
+<main role="main">
+<div class="container">
+
+<h1 class="my-5">ナビゲーションメニュー (カテゴリー/ローカルナビゲーション) </h1>
+
+<p>
+レスポンシブなカテゴリー/ローカルナビゲーションです。画面幅が Bootstrap の "Medium" 以下 (992px未満) では、メニューが折り畳まれます。</p>
+<p>
+&lt;nav&gt; 要素のすぐ内側で <div class="container"> を有効にすると、コンテンツを container 幅に収めることができます。</p>
+<p>
+このサンプルでは、スクロール時に、画面最上部にスティックさせていますが、ブラウザ画面全体をズーム表示させると、コンテンツ本文を常に覆い隠してしまうリスクもあるため、十分注意しましょう。</p>
+
+<h2 class="my-5">アクセシビリティの配慮</h2>
+
+<ul class="mb-5">
+<li>画面幅が "Medium" 以下の際、メニューの開閉がキーボード操作でも可能です。また、開閉に応じて aria-expanded の値が変わります (false/true)。</li>
+<li>&lt;nav&gt; 要素に「aria-label="カテゴリーメニュー"」を記述し、スクリーンリーダー利用者に対してナビゲーションの種類を明示しています。</li>
+</ul>
+
+<h2 class="my-5">この UI コンポーネントに固有の CSS および JavaScript</h2>
+
+<p>特記事項なし。</p>
+
+</div><!-- End .container -->
+</main>
+
+
+<!-- Optional JavaScript -->
+<!-- Font Awesome CDN -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

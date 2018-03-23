@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<title>ヘッダー (#02) &mdash; Dirty & Rapid Wireframing Components by @caztcha</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Additional CSS -->
+<link rel="stylesheet" type="text/css" href="additional/additional_stylesheet.css" >
+
+<!-- ★Additional CSS  (for Mega Dropdown Menu)★ -->
+<style>
+nav li.mega-dropdown{
+position:static;
+}
+
+nav li.mega-dropdown a[aria-expanded="true"]{
+font-weight:bold;
+}
+
+nav div.mega-dropdown-menu{
+width:100%;
+border-radius:0;
+border-top:1px #dddddd solid;
+border-left:none;
+border-right:none;
+border-bottom:1px #dddddd solid;
+margin-top:0;
+background-color:#fbfbfb;
+z-index:1040;
+}
+
+nav div.mega-dropdown-menu ul{
+padding-left:0;
+}
+
+nav div.mega-dropdown-menu li{
+list-style:none;
+padding-top:0.3em;
+paddong-bottom:0.3em;
+}
+
+nav div.mega-dropdown-menu a.dropdown-item{
+display:inline;
+font-size:110%;
+}
+
+@media screen and (min-width:992px){
+nav li.mega-dropdown a[aria-expanded="true"]{
+background-color:#f2f2f2;
+}
+
+nav div.mega-dropdown-menu{
+border-top:none;
+background-color: #f2f2f2;
+border-bottom:1px #999999 solid;
+padding-top:0;
+}
+
+nav div.mega-dropdown-menu div.row{
+margin-top:0;
+padding-top:2em;
+}
+
+nav div.mega-dropdown-menu a:hover{
+background-color:#f2f2f2;
+}
+
+nav div.mega-dropdown-menu a:focus{
+background-color:#f2f2f2;
+}
+}
+</style>
+
+<meta name="description" content="">
+
+</head>
+
+<body>
+
+<!------- ★ここから★ ------->
+<nav aria-label="サイト全体ナビゲーション" role="navigation" class="navbar navbar-expand-lg navbar-light py-lg-0" style="background-color: #fbfbfb;">
+<!--<div class="container">--><!-- ヘッダー内のコンテンツを container 幅で収めたい場合は、この div を有効にする。 -->
+
+<a class="navbar-brand mr-5 " href="#">[Site ID]</a>
+
+<button class="navbar-toggler px-1" style="border:none;" type="button" data-toggle="collapse" data-target="#navbarTogglerHeaderNav" aria-controls="navbarTogglerHeaderNav" aria-expanded="false" aria-label="メニュー/検索の開閉"><small aria-hidden="true">Menu / Search</small> <i class="fas fa-bars fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button>
+
+<div class="collapse navbar-collapse" id="navbarTogglerHeaderNav">
+
+<!-- 検索窓 (画面幅が lg 以上の場合は非表示) -->
+<form class="d-lg-none my-4" role="search">
+<div class="input-group">
+<label for="search" class="sr-only">サイト内検索</label>
+<input id="search" class="form-control" type="search" placeholder="サイト内検索">
+<div class="input-group-append">
+<button class="btn" type="submit" style="background:#fbfbfb; border-radius:0; border:1px #ced4da solid;"><span class="sr-only">検索</span><i class="fas fa-search" aria-hidden="true"></i></button>
+</div>
+</div>
+</form>
+
+<!--メニュー項目-->
+<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+<!-- メガドロップダウンメニュー -->
+<li class="nav-item dropdown mega-dropdown  mr-3"><a class="nav-link dropdown-toggle py-lg-4" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">メニュー1</a>
+
+<div class="dropdown-menu mega-dropdown-menu mb-3 px-3" aria-labelledby="navbarDropdownMenuLink">
+
+<div class="row">
+
+<div class="col-lg-4 col-md-6 my-3">
+<div class="media">
+<img class="mr-3" src="http://placehold.jp/100x100.png?text=(image)" alt="(代替テキスト)">
+<div class="media-body">
+<h2 class="h3">見出し</h2>
+<ul>
+<li><a class="dropdown-item" href="#">メニュー1</a></li>
+<li><a class="dropdown-item" href="#">メニュー2</a></li>
+<li><a class="dropdown-item" href="#">メニュー3</a></li>
+</ul>
+</div><!-- End .media-body -->
+</div><!-- End .media -->
+</div><!-- End .col -->
+
+<div class="col-lg-4  col-md-6 my-3">
+<div class="media">
+<img class="mr-3" src="http://placehold.jp/100x100.png?text=(image)" alt="(代替テキスト)">
+<div class="media-body">
+<h2 class="h3">見出し</h2>
+<ul>
+<li><a class="dropdown-item" href="#">メニュー1</a></li>
+<li><a class="dropdown-item" href="#">メニュー2</a></li>
+<li><a class="dropdown-item" href="#">メニュー3</a></li>
+</ul>
+</div><!-- End .media-body -->
+</div><!-- End .media -->
+</div><!-- End .col -->
+
+<div class="col-lg-4  col-md-6 my-3">
+<div class="media">
+<img class="mr-3" src="http://placehold.jp/100x100.png?text=(image)" alt="(代替テキスト)">
+<div class="media-body">
+<h2 class="h3">見出し</h2>
+<ul>
+<li><a class="dropdown-item" href="#">メニュー1</a></li>
+<li><a class="dropdown-item" href="#">メニュー2</a></li>
+<li><a class="dropdown-item" href="#">メニュー3</a></li>
+</ul>
+</div><!-- End .media-body -->
+</div><!-- End .media -->
+</div><!-- End .col -->
+
+</div><!--End .row-->
+</div><!-- End .dropdown-menu .mega-dropdown-menu -->
+</li><!-- メガドロップダウンメニューここまで -->
+
+<li class="nav-item mr-3"><a class="nav-link py-lg-4" href="#">メニュー2</a></li>
+<li class="nav-item mr-3"><a class="nav-link py-lg-4" href="#">メニュー3</a></li>
+<li class="nav-item mr-3"><a class="nav-link py-lg-4" href="#">メニュー4</a></li>
+<li class="nav-item mr-0"><a class="nav-link py-lg-4" href="#">メニュー5</a></li>
+</ul><!--メニュー項目ここまで-->
+
+<!--検索窓 (画面幅が lg 以上の場合に表示) -->
+<form class="d-none d-lg-block form-inline my-0" role="search">
+<div class="input-group">
+<label for="search_lg" class="sr-only">サイト内検索</label>
+<input id="search_lg" class="form-control" type="search" placeholder="サイト内検索">
+<div class="input-group-append">
+<button class="btn" type="submit" style="background:#fbfbfb; border-radius:0; border:1px #ced4da solid;"><span class="sr-only">検索</span><i class="fas fa-search" aria-hidden="true"></i></button>
+</div>
+</div>
+</form>
+
+</div><!-- End #navbarTogglerHeaderNav -->
+<!--</div>--><!-- End .container -->
+</nav>
+<!------- ★ここまで★ ------->
+
+<main role="main">
+
+<div class="container">
+
+<h1 class="my-5">ヘッダー (#02)</h1>
+
+<p>レスポンシブなメガドロップダウンメニューです。</p>
+<p>&lt;nav&gt; 要素のすぐ内側で &lt;div class="container"&gt; を有効にすると、ヘッダー内のコンテンツを container 幅に収めることができます。</p>
+
+<h2 class="my-5">アクセシビリティの配慮</h2>
+
+<ul>
+<li>ドロップダウンメニューをキーボード操作で開閉できます。Bootstrap のドロップダウンメニューの標準仕様として、展開中のメニューからフォーカスが外れると、自動的にそのメニューを閉じます。(複数のドロップダウンメニューが共存する場合の競合防止。)</li>
+<li>ドロップダウンメニューの開閉に応じて aria-expanded の値が変わります (false/true)。</li>
+<li>&lt;nav&gt; 要素に「aria-label="サイト全体ナビゲーション"」を記述し、スクリーンリーダー利用者に対してナビゲーションの種類を明示しています。</li>
+<li>サイト内検索の &lt;form&gt; 要素に「role="search"」を記述しています。</li>
+</ul>
+
+<h2 class="my-5">この UI コンポーネントに固有の CSS および JavaScript</h2>
+
+<ul class="mb-5">
+<li>&lt;head&gt; 内の Additional CSS (for Mega Dropdown Menu)。</li>
+<li>&lt;/body&gt; 手前の Additional JavaScript (for Mega Dropdown Menu)。展開中のメニューエリア内をクリックしたときにドロップダウンが閉じてしまう現象を解消しています。</li>
+</ul>
+
+</div><!-- End .container -->
+
+</main>
+
+
+<!-- Optional JavaScript -->
+<!-- Font Awesome CDN -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- ★Additional JavaScript (for Mega Dropdown Menu)★ -->
+<script>
+$('.mega-dropdown-menu').click(function(e) {
+e.stopPropagation();
+});
+</script>
+
+</body>
+</html>
