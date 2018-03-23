@@ -4,14 +4,6 @@ body{
 font-size:120%;
 }
 
-
-/*汎用設定 : data-toggle="collapse" (ハンバーガーメニューなど) のアニメーション無効化。*/
-/*.collapsing {
-  -webkit-transition: none;
-  transition: none;
-}
-*/
-
 /*汎用設定 : ボタン hover 時のカーソル*/
 
 button{
@@ -94,7 +86,6 @@ color:rgba(0,0,0,1); /*メニューの開閉トグルの文字色を濃くする
 display:inline-block; /*display:block; の打ち消し。メニュー項目のフォーカス範囲をラベル記述部分に限定する*/
 }
 
-
 /*汎用設定 : ナビゲーションの開閉ボタン*/
 
 nav button.navbar-toggler[aria-expanded="false"] svg.fa-times{
@@ -123,40 +114,4 @@ display:none;
 
 nav.nav-bigfooter button.navbar-toggler[aria-expanded="true"] svg.fa-plus{
 display:none;
-}
-
-/*汎用設定 : パンくず*/
-
-ol.breadcrumb{
-background-color:inherit; /*パンくず部分に背景色を無くす*/
-padding-left:0; /*背景色を無くすことに伴う位置調整*/
-}
-
-li.breadcrumb-item.active{
-color:#212529; /*アクティブ項目のコントラスト改善*/
-font-weight:bold; /*アクティブ項目の視認性向上*/
-}
-
-li.breadcrumb-item+.breadcrumb-item::before{
-content:"＞"; /*デフォルトのスラッシュではなく一般的な不等号記号を使う*/
-color:#212529; /*記号のコントラスト改善*/
-font-weight:bold; /*記号の視認性向上*/
-}
-
-/*汎用設定 : フッターエリア*/
-div.footer-area a{
-color:#212529; 
-}
-
-div.footer-area a:hover{
-text-decoration:none;
-}
-
-div.footer-area nav li{
-list-style:none;
-margin-bottom:0.5em; /*タップ領域の確保*/
-}
-
-footer{
-font-size:80%;	
 }

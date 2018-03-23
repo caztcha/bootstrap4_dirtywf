@@ -12,6 +12,25 @@
 <!-- Additional CSS -->
 <link rel="stylesheet" type="text/css" href="additional/additional_stylesheet.css" >
 
+<!-- Additional CSS (for Breadcrumb) -->
+<style>
+ol.breadcrumb{
+background-color:inherit; /*パンくず部分に背景色を無くす*/
+padding-left:0; /*背景色を無くすことに伴う位置調整*/
+}
+
+li.breadcrumb-item.active{
+color:#212529; /*アクティブ項目のコントラスト改善*/
+font-weight:bold; /*アクティブ項目の視認性向上*/
+}
+
+li.breadcrumb-item+.breadcrumb-item::before{
+content:"＞"; /*デフォルトのスラッシュではなく一般的な不等号記号を使う*/
+color:#212529; /*記号のコントラスト改善*/
+font-weight:bold; /*記号の視認性向上*/
+}
+</style>
+
 <meta name="description" content="">
 
 </head>

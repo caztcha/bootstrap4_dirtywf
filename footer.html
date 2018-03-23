@@ -12,6 +12,31 @@
 <!-- Additional CSS -->
 <link rel="stylesheet" type="text/css" href="additional/additional_stylesheet.css" >
 
+<!-- Additional CSS (for Footer) -->
+<style>
+div.footer-area a{
+color:#212529; 
+}
+
+div.footer-area a:hover{
+text-decoration:none;
+}
+
+div.footer-area nav li{
+list-style:none;
+margin-bottom:0.5em; /*タップ領域の確保*/
+}
+
+div.footer-area nav button{
+border:none;
+width:44px;
+}
+
+footer{
+font-size:80%;	
+}
+</style>
+
 <meta name="description" content="">
 
 </head>
@@ -53,8 +78,8 @@
 <div class="row">
 
 <div class="col-lg">
-<h2 class="h5" style="line-height:2;"><a href="#">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a> 
-<button class="navbar-toggler d-lg-none float-right" style="border:none; width:44px; height:44px;" type="button" data-toggle="collapse" data-target="#bigfooter-1" aria-controls="bigfooter-1" aria-expanded="false" aria-label="メニューの開閉"><i class="fas fa-plus fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button></h2>
+<h2 class="h4 mb-3"><a href="#" class="align-middle">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a>
+<button class="navbar-toggler d-lg-none float-right" type="button" data-toggle="collapse" data-target="#bigfooter-1" aria-controls="bigfooter-1" aria-expanded="false" aria-label="メニューの開閉"><i class="fas fa-plus fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button></h2>
 <div class="collapse" id="bigfooter-1">
 <ul>
 <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
@@ -69,8 +94,8 @@
 </div><!-- End .col-lg-->
 
 <div class="col-lg">
-<h2 class="h5" style="line-height:2;"><a href="#">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a> 
-<button class="navbar-toggler d-lg-none float-right" style="border:none; width:44px; height:44px;" type="button" data-toggle="collapse" data-target="#bigfooter-2" aria-controls="bigfooter-2" aria-expanded="false" aria-label="メニューの開閉"><i class="fas fa-plus fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button></h2>
+<h2 class="h4 mb-3"><a href="#" class="align-middle">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a> 
+<button class="navbar-toggler d-lg-none float-right" type="button" data-toggle="collapse" data-target="#bigfooter-2" aria-controls="bigfooter-2" aria-expanded="false" aria-label="メニューの開閉"><i class="fas fa-plus fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button></h2>
 <div  class="collapse" id="bigfooter-2">
 <ul>
 <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
@@ -82,9 +107,9 @@
 </div><!-- End .collapse -->
 </div><!-- End .col-lg-->
 
- <div class="col-lg">
-<h2 class="h5" style="line-height:2;"><a href="#">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a> 
-<button class="navbar-toggler d-lg-none float-right" style="border:none; width:44px; height:44px;" type="button" data-toggle="collapse" data-target="#bigfooter-3" aria-controls="bigfooter-3" aria-expanded="false" aria-label="メニューの開閉"><i class="fas fa-plus fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button></h2>
+<div class="col-lg">
+<h2 class="h4 mb-3"><a href="#" class="align-middle">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a> 
+<button class="navbar-toggler d-lg-none float-right" type="button" data-toggle="collapse" data-target="#bigfooter-3" aria-controls="bigfooter-3" aria-expanded="false" aria-label="メニューの開閉"><i class="fas fa-plus fa-lg" aria-hidden="true"></i><i class="fas fa-times fa-lg" aria-hidden="true"></i></button></h2>
 <div  class="collapse" id="bigfooter-3">
 <ul>
 <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
@@ -92,8 +117,8 @@
 <li><a href="#">メニュー項目 <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></li>
 </ul>
 </div><!-- End .collapse -->
-<h2 class="h5" style="line-height:2;"><a href="#">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></h2>
-<h2 class="h5" style="line-height:2;"><a href="#">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></h2>
+<h2 class="h4 mb-3"><a href="#" class="align-middle">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></h2>
+<h2 class="h4 mb-3"><a href="#" class="align-middle">見出し <i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></a></h2>
 </div><!-- End .col-lg-->
 
 </div><!-- End .row -->
@@ -106,10 +131,10 @@
 <div class="container">
 <footer class="mt-2" role="contentinfo">
 <ul class="nav">
-  <li class="my-1 mr-3"><a href="#">Terms of Use</a></li>
-  <li class="my-1 mr-3"><a href="#">Privacy</a></li>
-  <li class="my-1 mr-3"><a href="#">Accessibility</a></li>
-  <li class="my-1"><a href="#">Contact Us</a></li>
+<li class="my-1 mr-3"><a href="#">Terms of Use</a></li>
+<li class="my-1 mr-3"><a href="#">Privacy</a></li>
+<li class="my-1 mr-3"><a href="#">Accessibility</a></li>
+<li class="my-1"><a href="#">Contact Us</a></li>
 </ul>
 
 <p class="text-right mt-4 mb-0">&copy; Foo Baa Corporation</p>
