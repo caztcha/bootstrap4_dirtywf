@@ -157,3 +157,6 @@ list-style:none;
 margin-bottom:0.5em; /*タップ領域の確保*/
 }
 
+footer{
+font-size:80%;	
+}
