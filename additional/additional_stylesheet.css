@@ -51,6 +51,13 @@ text-decoration:underline; /*下線を付ける*/
 
 /*汎用設定 : ナビゲーションバー*/
 
+.navbar{
+padding-left:10px;
+padding-right:10px;
+padding-top:3px;
+padding-bottom:3px;
+}
+
 .navbar-light{
 border-bottom:1px #999999 solid; /*薄く境界線を引く*/
 }
