@@ -17,17 +17,16 @@
 ol.breadcrumb{
 background-color:inherit; /*パンくず部分に背景色を無くす*/
 padding-left:0; /*背景色を無くすことに伴う位置調整*/
+font-size:90%;
 }
 
 li.breadcrumb-item.active{
 color:#212529; /*アクティブ項目のコントラスト改善*/
-font-weight:bold; /*アクティブ項目の視認性向上*/
 }
 
 li.breadcrumb-item+.breadcrumb-item::before{
-content:"＞"; /*デフォルトのスラッシュではなく一般的な不等号記号を使う*/
+/*content:"＞"; */ /*デフォルトのスラッシュではなく一般的な不等号記号を使うはこのコメントアウトを外す。*/
 color:#212529; /*記号のコントラスト改善*/
-font-weight:bold; /*記号の視認性向上*/
 }
 </style>
 
