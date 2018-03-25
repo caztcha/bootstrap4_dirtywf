@@ -31,10 +31,9 @@ input[type="number"] {
 <!-- thanks to http://www.cssportal.com/style-input-range/ -->
 <style>
 input[type=range] {
-height: 70px;
+height: 48px;
 -webkit-appearance: none;
-margin: 10px 0;
-width: 100%;
+swidth: 100%;
 }
 
 input[type=range]:focus {
@@ -55,13 +54,13 @@ border: 0px solid #000000;
 input[type=range]::-webkit-slider-thumb {
 box-shadow: 0px 0px 0px #000000;
 border: 0px solid #000000;
-height: 44px;
-width: 44px;
-border-radius: 44px;
+height: 36px;
+width: 36px;
+border-radius: 36px;
 background: #666666;
 cursor: pointer;
 -webkit-appearance: none;
-margin-top: -19.5px;
+margin-top: -16px;
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
@@ -242,13 +241,13 @@ height: 2.375rem;
 <label for="numberofunit">個数</label>
 <div class="input-group" style="width:200px;">
 <div class="input-group-prepend">
-<button type="button" class="btn btn-lg btn-secondary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+<button type="button" class="btn btn-secondary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
 <i class="fas fa-minus fa-lg"></i><span class="sr-only">1つ減らす</span>
 </button>
 </div>
 <input type="number" name="quant[1]" id="numberofunit" class="form-control input-number hidespinbutton" value="0" min="0" max="100" aria-live="polite">
 <div class="input-group-append">
-<button type="button" class="btn btn-lg btn-secondary btn-number" data-type="plus" data-field="quant[1]">
+<button type="button" class="btn btn-secondary btn-number" data-type="plus" data-field="quant[1]">
 <i class="fas fa-plus fa-lg"></i><span class="sr-only">1つ増やす</span>
 </button>
 </div>
@@ -323,16 +322,16 @@ height: 2.375rem;
 
 <h2 class="h3 mt-5 mb-3">選択ボタン (ソースはラジオボタン)</h2>
 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-<label class="btn btn-outline-secondary btn-lg active">
+<label class="btn btn-outline-secondary py-2 active">
 <input type="radio" name="options" id="option1" autocomplete="off" checked>和食</label>
-<label class="btn btn-outline-secondary btn-lg ">
+<label class="btn btn-outline-secondary py-2">
 <input type="radio" name="options" id="option2" autocomplete="off">洋食</label>
-<label class="btn btn-outline-secondary btn-lg ">
+<label class="btn btn-outline-secondary py-2">
 <input type="radio" name="options" id="option3" autocomplete="off">中華</label>
 </div>
 
 <h2 class="h3 mt-5 mb-3">サブミットボタン</h2>
-<button type="submit" class="btn btn-primary2 btn-lg px-5 py-3">送信</button>
+<button type="submit" class="btn btn-lg btn-primary2 px-5 py-2">送信</button>
 
 </form>
 
