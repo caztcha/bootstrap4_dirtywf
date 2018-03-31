@@ -32,10 +32,11 @@
 <h2 class="my-5">アクセシビリティの配慮</h2>
 
 <ul>
-<li>[Tab] キーによるフォーカス移動および [Enter] キーによる実行が可能です。スクリーンリーダーを併用していない場合は、(フォーカスがカルーセル内にあれば) 左右矢印キーでもパネル切り替えが可能です。</li>
+<li>キーボード操作 ([Tab] キーによるフォーカスおよび [Enter] キーによる実行) が可能です。</li>
+<li>スクリーンリーダーを併用していない場合は、(フォーカスがカルーセル内にあれば) 左右矢印キーでパネルを切り替えることもできます。</li>
 <li>ボタン (前のパネル/次のパネル) の aria-label 属性値を日本語化しています (slick.js を加筆修正)。</li>
 <li>ボタン (前のパネル/次のパネル)  の配色改善およびフォーカス非可視化 (outline:none;) の無効化をしています (slick-theme.css を加筆修正)。</li>
-<li>ボタン (前のパネル/次のパネル)  のタップ可能領域を拡大しています (44 CSS pixels 四方)。また、ボタンとパネルのタップ可能領域の重なりを解決 (ボタンを優先) するために、ボタン側に z-index 値を追記しています。</li>
+<li>ボタン (前のパネル/次のパネル)  のタップ可能領域を拡大しています (44 × 44 CSS px)。また、ボタンとパネルのタップ可能領域の重なりを解決 (ボタンを優先) するために、ボタン側に z-index 値を追記しています。</li>
 <li>各パネルがリンクである場合、&lt;a&gt; 要素が親要素の下位にあると (たとえば、div や、箇条書きマークアップであれば li などの中に a があると)、Slick の仕様として、その親要素にもフォーカスが当たるようになっているため、スクリーンリーダーユーザーがリンクを利用できない (&lt;a&gt; 要素にフォーカスが当たってもラベルが読み上げられない) 恐れがあります。このため、このサンプルでは、&lt;a&gt; が各パネルの親要素になるようにしています。</li>
 <li>カルーセルの親要素 &lt;div class="responsive-carousel"&gt; に aria-live="polite" を記述しています。パネルを切り替えるたびにライブで、表示されるパネル (の画像 alt やテキストラベル) がスクリーンリーダーで読み上げられるようにしています。(Firefox + NVDA ではうまくいかず。)</li>
 </ul>
@@ -43,8 +44,8 @@
 <h2 class="my-5">この UI コンポーネントに固有の CSS および JavaScript</h2>
 
 <ul>
-<li>&lt;head&gt; 内の Additional CSS (for Slick) にある slick.css および slick-theme.css。</li>
-<li>&lt;/body&gt; 手前の Additional JavaScript (for Slick) にある slick.js およびカスタマイズのための script。</li>
+<li>&lt;head&gt; 内の Additional CSS (for Slick) にある slick.css および slick-theme.css</li>
+<li>&lt;/body&gt; 手前の Additional JavaScript (for Slick) にある slick.js およびカスタマイズのための script</li>
 </ul>
 
 <div style="height:5em;"></div>

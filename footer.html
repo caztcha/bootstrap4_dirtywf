@@ -12,8 +12,13 @@
 <!-- Additional CSS -->
 <link rel="stylesheet" type="text/css" href="additional/additional_stylesheet.css" >
 
-<!-- Additional CSS (for Footer) -->
+<!-- ★Additional CSS (for Footer)★ -->
 <style>
+div.footer-area{
+background-color: #fbfbfb; 
+border-top:1px #999999 solid;"
+}
+
 div.footer-area a{
 color:#212529; 
 }
@@ -33,7 +38,7 @@ width:44px;
 }
 
 footer{
-font-size:80%;	
+font-size:80%;
 }
 </style>
 
@@ -54,15 +59,16 @@ font-size:80%;
 <h2 class="my-5">アクセシビリティの配慮</h2>
 
 <ul>
-<li>画面幅が "Medium" 以下の際、メニューの開閉がキーボード操作でも可能です。また、開閉に応じて aria-expanded の値が変わります (false/true)。</li>
-<li>ビッグフッター部分 (&lt;nav&gt; 要素) に「aria-label="サイトマップ"」を記述し、スクリーンリーダー利用者に対してナビゲーションの種類を明示しています。</li>
+<li>キーボード操作 ([Tab] キーによるフォーカスおよび [Enter] キーによる実行) が可能です。</li>
+<li>画面幅が "Medium" 以下の際、開閉状況に応じて aria-expanded 属性値が変わります (true/false)。</li>
+<li>ビッグフッター部分 (&lt;nav&gt; 要素) に aria-label (="サイトマップ") を記述し、ナビゲーションの種類を明示しています。</li>
 </ul>
 
-<h2 class="my-5">固有の CSS および JavaScript</h2>
+<h2 class="my-5">この UI コンポーネントに固有の CSS および JavaScript</h2>
 
 <ul class="mb-5">
-<li>HTML の中にインラインでスタイルを調整しています。</li>
-<li>&lt;/body&gt; 手前の Additional JavaScript (for Big Footer)。画面幅に応じた class 適用を調整しています。</li>
+<li>&lt;head&gt; 内の Additional CSS (for Footer)</li>
+<li>&lt;/body&gt; 手前の Additional JavaScript (for Big Footer)</li>
 </ul>
 
 </div><!-- End .container -->
@@ -70,7 +76,7 @@ font-size:80%;
 
 
 <!------- ★ここから★ ------->
-<div class="footer-area pb-3"  style="background-color: #fbfbfb; border-top:1px #999999 solid;"><!-- 閉じタグは、/body の直前  -->
+<div class="footer-area pb-3"><!-- 閉じタグは、/body の直前  -->
 
 <!-- ★ビッグフッターここから★ -->
 <div class="container">

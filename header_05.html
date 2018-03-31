@@ -19,7 +19,7 @@
 <body>
 
 <!------- ★ここから★ ------->
-<nav aria-label="ホームへのリンクおよびサイト内検索" role="navigation" class="navbar navbar-light" style="background-color: #fbfbfb;">
+<nav aria-label="サイト全体ナビゲーション" role="navigation" class="navbar navbar-light" style="background-color: #fbfbfb;">
 <!--<div class="container">--><!-- ヘッダー内のコンテンツを container 幅で収めたい場合は、この div を有効にする。 -->
 
 <button class="navbar-toggler px-2" style="border:none; height:44px;" type="button" data-toggle="collapse" data-target="#navbarTogglerHeaderMenu" aria-controls="navbarTogglerHeaderMenu" aria-expanded="false" aria-label="メニューの開閉"><i class="fas fa-bars" aria-hidden="true"></i><i class="fas fa-times fa-sm" aria-hidden="true"></i> <small aria-hidden="true">Menu</small></button>
@@ -37,7 +37,7 @@
 
 <div style="position:absolute; top:25px; left:50%; transform:translate(0, -50%); -webkit-transform:translate(-50%, -50%);"><a class="navbar-brand mx-auto" href="#">[Site ID]</a></div>
 
-<button class="navbar-toggler px-1" style="border:none; position:absolute; top:3px; right:10px; width:44px; height:44px;" type="button" data-toggle="collapse" data-target="#navbarTogglerHeaderSearch" aria-controls="navbarTogglerHeaderSearch" aria-expanded="false" aria-label="サイト内検索の開閉" role="search"><i class="fas fa-search" aria-hidden="true"></i><i class="fas fa-times fa-sm" aria-hidden="true"></i></button>
+<button class="navbar-toggler px-1" style="border:none; position:absolute; top:3px; right:10px; width:44px; height:44px;" type="button" data-toggle="collapse" data-target="#navbarTogglerHeaderSearch" aria-controls="navbarTogglerHeaderSearch" aria-expanded="false" aria-label="サイト内検索の開閉"><i class="fas fa-search" aria-hidden="true"></i><i class="fas fa-times fa-sm" aria-hidden="true"></i></button>
 
 <div class="collapse navbar-collapse" id="navbarTogglerHeaderSearch" style="position:absolute; top:3px; width:80%;">
 <!--検索窓-->
@@ -68,8 +68,10 @@
 <h2 class="my-5">アクセシビリティの配慮</h2>
 
 <ul>
-<li>メニューの開閉がキーボード操作でも可能です。また、開閉に応じて aria-expanded の値が変わります (false/true)。</li>
-<li>&lt;nav&gt; 要素に「aria-label="ホームへのリンクおよびサイト内検索"」を記述し、スクリーンリーダー利用者に対してナビゲーションの種類を明示しています。</li>
+<li>キーボード操作 ([Tab] キーによるフォーカスおよび [Enter] キーによる実行) が可能です。</li>
+<li>メニューおよびサイト内検索の開閉状況に応じて aria-expanded 属性値が変わります (true/false)。</li>
+<li>ボタンのサイズを 44 × 44 CSS px 確保しています。</li>
+<li>&lt;nav&gt; 要素に aria-label (="サイト全体ナビゲーション") を記述し、ナビゲーションの種類を明示しています。</li>
 <li>サイト内検索の &lt;form&gt; 要素に「role="search"」を記述しています。</li>
 </ul>
 

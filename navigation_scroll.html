@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<title>ナビゲーションメニュー (カテゴリー/ローカルナビゲーション) &mdash; Dirty & Rapid Wireframing Components by @caztcha</title>
+<title>ナビゲーションメニュー (スクロール) &mdash; Dirty & Rapid Wireframing Components by @caztcha</title>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,7 +35,7 @@ white-space:nowrap;
 
 <a class="navbar-brand mr-5 px-1" href="#">[Site ID]</a>
 
-<button class="navbar-toggler px-1" style="border:none; width:44px; height:44px;" type="button" data-toggle="collapse" data-target="#navbarTogglerHeaderNav" aria-controls="navbarTogglerHeaderNav" aria-expanded="false" aria-label="サイト内検索の開閉" role="search"><i class="fas fa-search" aria-hidden="true"></i><i class="fas fa-times fa-sm" aria-hidden="true"></i></button>
+<button class="navbar-toggler px-1" style="border:none; width:44px; height:44px;" type="button" data-toggle="collapse" data-target="#navbarTogglerHeaderNav" aria-controls="navbarTogglerHeaderNav" aria-expanded="false" aria-label="サイト内検索の開閉"><i class="fas fa-search" aria-hidden="true"></i><i class="fas fa-times fa-sm" aria-hidden="true"></i></button>
 
 <div class="collapse navbar-collapse" id="navbarTogglerHeaderNav" style="position:absolute; top:0; width:80%; position:absolute; top:3px;">
 
@@ -56,7 +56,7 @@ white-space:nowrap;
 <!------- サイト共通ヘッダー (ダミー) ここまで ------->
 
 <!------- ★ここから★ ------->
-<nav aria-label="カテゴリーメニュー" class="navbar navbar-local navbar-expand navbar-light" style="background-color: #ffffff;">
+<nav aria-label="メインメニュー" class="navbar navbar-local navbar-expand navbar-light" style="background-color: #ffffff;">
 <ul class="navbar-nav mx-auto">
 <li class="nav-item"><a class="nav-link mr-3" href="#">メニュー1</a></li>
 <li class="nav-item"><a class="nav-link mr-3" href="#">メニュー2</a></li>
@@ -72,20 +72,18 @@ white-space:nowrap;
 <main role="main">
 <div class="container">
 
-<h1 class="my-5">ナビゲーションメニュー (カテゴリー/ローカルナビゲーション) </h1>
+<h1 class="my-5">ナビゲーションメニュー (スクロール) </h1>
 
 <p>
-レスポンシブなカテゴリー/ローカルナビゲーションです。画面幅が Bootstrap の "Medium" 以下 (992px未満) では、メニューが折り畳まれます。</p>
+画面幅に収まりきらない場合は横方向にスクロールする、ナビゲーションメニューです。</p>
 <p>
 &lt;nav&gt; 要素のすぐ内側で &lt;div class="container"&gt; を有効にすると、コンテンツを container 幅に収めることができます。</p>
-<p>
-このサンプルでは、スクロール時に、画面最上部にスティックさせていますが、ブラウザ画面全体をズーム表示させると、コンテンツ本文を常に覆い隠してしまうリスクもあるため、十分注意しましょう。</p>
 
 <h2 class="my-5">アクセシビリティの配慮</h2>
 
-<ul class="mb-5">
-<li>画面幅が "Medium" 以下の際、メニューの開閉がキーボード操作でも可能です。また、開閉に応じて aria-expanded の値が変わります (false/true)。</li>
-<li>&lt;nav&gt; 要素に「aria-label="カテゴリーメニュー"」を記述し、スクリーンリーダー利用者に対してナビゲーションの種類を明示しています。</li>
+<ul>
+<li>キーボード操作 ([Tab] キーによるフォーカスおよび [Enter] キーによる実行) が可能です。</li>
+<li>&lt;nav&gt; 要素に aria-label (="メインメニュー") を記述し、ナビゲーションの種類を明示しています。</li>
 </ul>
 
 <h2 class="my-5">この UI コンポーネントに固有の CSS および JavaScript</h2>
